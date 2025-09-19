@@ -115,7 +115,7 @@ MIT License - feel free to use and modify as needed.
 
 ## 🙏 Credits
 
-Created with ❤️ by the Owl Retro Team
+Created with ❤️ by the Xenit
 
 Special thanks to **Nikola** ([@nikolaNoUndo](https://x.com/nikolaNoUndo)) for the inspiration behind this retro theme concept.
 
