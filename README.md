@@ -109,7 +109,7 @@ MIT License - feel free to use and modify as needed.
 
 ## 🙏 Credits
 
-Created with ❤️ by the Owl Retro Team
+Created with ❤️ by the Xenit
 
 ---
 
