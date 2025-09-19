@@ -1,0 +1,286 @@
+/**
+ * Owl Retro - Light Theme
+ * Minimal Retro Style - Less borders, cleaner look
+ * Palette: #fbcd43 (gold), #e64b35 (red), #c6312b, #992d3c, #6d2744, #b7b2a5, #685a3c
+ */
+
+/* CSS Variables for Light Theme */
+html.owl-retro-light {
+  /* Retro Color Variables - More Harmonious */
+  --owl-bg-primary: #faf8f3;
+  --owl-bg-secondary: #f5f2ea;
+  --owl-bg-tertiary: #ede9e0;
+  --owl-text-primary: #6d2744;  /* Dark purple for primary text */
+  --owl-text-secondary: #685a3c; /* Brown for secondary text */
+  --owl-accent-1: #c6312b;      /* Main red accent */
+  --owl-accent-2: #992d3c;      /* Wine red */
+  --owl-accent-3: #b7b2a5;      /* Beige for subtle highlights */
+  --owl-border-color: #d4cfc4;  /* Soft beige for borders */
+  --owl-shadow-color: rgba(104, 90, 60, 0.08); /* Subtle brown shadow */
+  
+  /* Warm cream background */
+  background: #faf8f3 !important;
+  min-height: 100vh;
+  color: var(--owl-text-secondary) !important;
+}
+
+/* Body and main containers */
+html.owl-retro-light body {
+  background-color: transparent !important;
+  color: var(--owl-text-secondary) !important;
+}
+
+/* Headers with dark accent */
+html.owl-retro-light h1,
+html.owl-retro-light h2,
+html.owl-retro-light h3,
+html.owl-retro-light h4,
+html.owl-retro-light h5,
+html.owl-retro-light h6 {
+  color: var(--owl-text-primary) !important;
+  text-shadow: 1px 1px 2px rgba(183, 178, 165, 0.5);
+}
+
+/* Links with red accent */
+html.owl-retro-light a {
+  color: var(--owl-accent-1) !important;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+html.owl-retro-light a:hover {
+  color: var(--owl-accent-2) !important;
+  text-shadow: 0 0 4px rgba(230, 75, 53, 0.2);
+}
+
+/* Card and Container Effects - Minimal */
+html.owl-retro-light article,
+html.owl-retro-light section {
+  /* Only subtle separation */
+  border-bottom: 1px solid rgba(212, 207, 196, 0.3) !important;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Button Retro Style - Minimal */
+html.owl-retro-light button,
+html.owl-retro-light [role="button"],
+html.owl-retro-light input[type="button"],
+html.owl-retro-light input[type="submit"] {
+  background: var(--owl-bg-tertiary) !important;
+  color: var(--owl-text-primary) !important;
+  border: 1px solid var(--owl-border-color) !important;
+  border-radius: 3px !important;
+  transition: all 0.2s ease;
+}
+
+html.owl-retro-light button:hover,
+html.owl-retro-light [role="button"]:hover {
+  background: var(--owl-accent-3) !important;
+  border-color: var(--owl-accent-2) !important;
+}
+
+/* Input Fields */
+html.owl-retro-light input,
+html.owl-retro-light textarea,
+html.owl-retro-light select {
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  color: var(--owl-text-secondary) !important;
+  border: 1px solid var(--owl-border-color) !important;
+  border-radius: 2px !important;
+}
+
+html.owl-retro-light input:focus,
+html.owl-retro-light textarea:focus {
+  border-color: var(--owl-accent-1) !important;
+  box-shadow: 0 0 0 2px rgba(230, 75, 53, 0.15) !important;
+  outline: none !important;
+}
+
+/* Table Retro Style - Cleaner */
+html.owl-retro-light table {
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  background-color: var(--owl-bg-primary) !important;
+}
+
+html.owl-retro-light th,
+html.owl-retro-light td {
+  border-bottom: 1px solid var(--owl-border-color) !important;
+  padding: 8px !important;
+  background-color: transparent !important;
+}
+
+html.owl-retro-light th {
+  background: var(--owl-bg-tertiary) !important;
+  color: var(--owl-text-primary) !important;
+  font-weight: bold !important;
+  border-bottom: 2px solid var(--owl-accent-2) !important;
+}
+
+/* Scrollbar Styling */
+html.owl-retro-light ::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+html.owl-retro-light ::-webkit-scrollbar-track {
+  background: var(--owl-bg-secondary);
+  border: 1px solid var(--owl-border-color);
+}
+
+html.owl-retro-light ::-webkit-scrollbar-thumb {
+  background: var(--owl-accent-3);
+  border-radius: 2px;
+  border: 1px solid var(--owl-border-color);
+}
+
+html.owl-retro-light ::-webkit-scrollbar-thumb:hover {
+  background: var(--owl-accent-2);
+}
+
+/* Code Blocks */
+html.owl-retro-light pre,
+html.owl-retro-light code {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  color: var(--owl-text-primary) !important;
+  border: 1px solid var(--owl-border-color) !important;
+  border-radius: 2px !important;
+  padding: 4px 8px !important;
+}
+
+/* Blockquote */
+html.owl-retro-light blockquote {
+  border-left: 4px solid var(--owl-accent-1) !important;
+  background: linear-gradient(90deg, rgba(230, 75, 53, 0.05) 0%, transparent 100%) !important;
+  padding-left: 16px !important;
+  margin: 16px 0 !important;
+}
+
+/* Monospace Font Override */
+html.owl-font {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace !important;
+}
+
+html.owl-font * {
+  font-family: inherit !important;
+}
+
+/* Font Exceptions - Preserve Original */
+html.owl-font :is(code, pre, .fa, .fas, .far, .fab, .material-icons, svg, math) {
+  font-family: initial !important;
+}
+
+/* Icon Font Classes Exception */
+html.owl-font [class*="icon"]:before,
+html.owl-font [class*="icon"]:after {
+  font-family: initial !important;
+}
+
+/* DYNAMIC LIGHT MODE - Minimal approach */
+
+/* Universal background fix */
+html.owl-retro-light body,
+html.owl-retro-light main,
+html.owl-retro-light article,
+html.owl-retro-light section,
+html.owl-retro-light aside,
+html.owl-retro-light nav,
+html.owl-retro-light header,
+html.owl-retro-light footer,
+html.owl-retro-light div[role="main"],
+html.owl-retro-light div[role="navigation"],
+html.owl-retro-light div[role="complementary"] {
+  background: var(--owl-bg-primary) !important;
+  color: var(--owl-text-secondary) !important;
+}
+
+/* Cards and posts - minimal borders */
+html.owl-retro-light [class*="card"],
+html.owl-retro-light [class*="Card"],
+html.owl-retro-light [class*="post"],
+html.owl-retro-light [class*="Post"],
+html.owl-retro-light [class*="tweet"],
+html.owl-retro-light [class*="Tweet"],
+html.owl-retro-light article[role="article"],
+html.owl-retro-light div[role="article"] {
+  background: var(--owl-bg-secondary) !important;
+  border: 1px solid rgba(212, 207, 196, 0.2) !important;
+  border-radius: 4px !important;
+  margin: 8px 0 !important;
+  padding: 12px !important;
+}
+
+/* Sidebars - minimal */
+html.owl-retro-light [class*="sidebar"],
+html.owl-retro-light [class*="Sidebar"],
+html.owl-retro-light nav[role="navigation"] {
+  background: var(--owl-bg-secondary) !important;
+  border-right: 1px solid rgba(212, 207, 196, 0.2) !important;
+}
+
+/* Modals and dialogs - cleaner */
+html.owl-retro-light [class*="modal"],
+html.owl-retro-light [class*="Modal"],
+html.owl-retro-light [class*="dialog"],
+html.owl-retro-light [class*="Dialog"],
+html.owl-retro-light [role="dialog"] {
+  background: white !important;
+  border: 1px solid var(--owl-border-color) !important;
+  box-shadow: 0 8px 24px rgba(104, 90, 60, 0.15) !important;
+}
+
+/* YouTube specific fixes */
+html.owl-retro-light ytd-app,
+html.owl-retro-light ytd-mini-guide-renderer,
+html.owl-retro-light ytd-guide-renderer,
+html.owl-retro-light tp-yt-app-drawer {
+  background: var(--owl-bg-primary) !important;
+}
+
+/* YouTube sidebar fix */
+html.owl-retro-light #guide-inner-content,
+html.owl-retro-light ytd-mini-guide-entry-renderer,
+html.owl-retro-light ytd-guide-entry-renderer {
+  background: transparent !important;
+}
+
+/* YouTube menu items */
+html.owl-retro-light ytd-guide-entry-renderer:hover,
+html.owl-retro-light ytd-mini-guide-entry-renderer:hover {
+  background: var(--owl-bg-secondary) !important;
+}
+
+/* Input fields and form elements */
+html.owl-retro-light input:not([type="checkbox"]):not([type="radio"]),
+html.owl-retro-light textarea,
+html.owl-retro-light select {
+  background: white !important;
+  color: var(--owl-text-secondary) !important;
+  border: 1px solid var(--owl-border-color) !important;
+}
+
+/* Important site containers - less aggressive */
+html.owl-retro-light div:not([class]):not([id]) {
+  background-color: transparent !important;
+}
+
+/* Monospace Font Override */
+html.owl-font {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace !important;
+}
+
+html.owl-font * {
+  font-family: inherit !important;
+}
+
+/* Font Exceptions - Preserve Original */
+html.owl-font :is(code, pre, .fa, .fas, .far, .fab, .material-icons, svg, math) {
+  font-family: initial !important;
+}
+
+/* Icon Font Classes Exception */
+html.owl-font [class*="icon"]:before,
+html.owl-font [class*="icon"]:after {
+  font-family: initial !important;
+}

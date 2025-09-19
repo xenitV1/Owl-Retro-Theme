@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Owl Retro - Settings</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <img src="../../icons/icon48.png" alt="Owl Retro" width="48" height="48">
+      <h1>Owl Retro Settings</h1>
+      <span class="version">v1.0.0</span>
+    </header>
+
+    <div class="content">
+      <section class="settings-section">
+        <h2>General Settings</h2>
+        
+        <div class="setting-group">
+          <label class="setting-label">
+            <span>Default Theme Mode</span>
+            <select id="default-mode">
+              <option value="auto">Auto (System)</option>
+              <option value="light">Light</option>
+              <option value="dark">Dark</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="setting-group">
+          <label class="setting-label checkbox">
+            <input type="checkbox" id="enable-monospace">
+            <span>Use Monospace Font by Default</span>
+          </label>
+        </div>
+
+        <div class="setting-group">
+          <label class="setting-label">
+            <span>Default Color Intensity</span>
+            <span id="intensity-display">80%</span>
+          </label>
+          <input type="range" id="default-intensity" min="50" max="100" value="80" step="5">
+        </div>
+      </section>
+
+      <section class="settings-section">
+        <h2>Site Management</h2>
+        
+        <div class="site-lists">
+          <div class="site-list-container">
+            <h3>Always Enable On These Sites</h3>
+            <div id="allowlist" class="site-list"></div>
+            <div class="add-site">
+              <input type="text" id="allow-site-input" placeholder="example.com">
+              <button id="add-allow-site">Add Site</button>
+            </div>
+          </div>
+
+          <div class="site-list-container">
+            <h3>Never Enable On These Sites</h3>
+            <div id="blocklist" class="site-list"></div>
+            <div class="add-site">
+              <input type="text" id="block-site-input" placeholder="example.com">
+              <button id="add-block-site">Add Site</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="settings-section">
+        <h2>Advanced</h2>
+        
+        <div class="setting-group">
+          <label class="setting-label checkbox">
+            <input type="checkbox" id="enable-cache">
+            <span>Enable Performance Cache</span>
+          </label>
+          <p class="setting-description">Cache theme data for faster loading on frequently visited sites</p>
+        </div>
+
+        <div class="button-group">
+          <button id="clear-all-cache" class="secondary-btn">Clear All Cache</button>
+          <button id="reset-settings" class="danger-btn">Reset to Defaults</button>
+        </div>
+      </section>
+
+      <section class="settings-section">
+        <h2>About</h2>
+        <div class="about-content">
+          <p>Owl Retro transforms any website into a beautiful retro-themed experience.</p>
+          <p class="color-palette">
+            <span class="color-chip" style="background: #fbcd43"></span>
+            <span class="color-chip" style="background: #e64b35"></span>
+            <span class="color-chip" style="background: #c6312b"></span>
+            <span class="color-chip" style="background: #992d3c"></span>
+            <span class="color-chip" style="background: #6d2744"></span>
+            <span class="color-chip" style="background: #b7b2a5"></span>
+            <span class="color-chip" style="background: #685a3c"></span>
+          </p>
+          <p class="links">
+            <a href="https://github.com/owlretro/extension" target="_blank">GitHub</a>
+            <span>•</span>
+            <a href="#" id="privacy-link">Privacy Policy</a>
+            <span>•</span>
+            <a href="#" id="help-link">Help</a>
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <button id="save-settings" class="primary-btn">Save Settings</button>
+    </footer>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>

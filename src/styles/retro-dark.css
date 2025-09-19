@@ -1,0 +1,296 @@
+/**
+ * Owl Retro - Dark Theme  
+ * Minimal Retro Style - Less borders, better readability
+ * Palette: #fbcd43 (gold), #e64b35 (red), #c6312b, #992d3c, #6d2744, #b7b2a5, #685a3c
+ */
+
+/* CSS Variables for Dark Theme */
+html.owl-retro-dark {
+  /* Retro Color Variables - Optimized for readability */
+  --owl-bg-primary: #1a1815;
+  --owl-bg-secondary: #252320;
+  --owl-bg-tertiary: #2f2c28;
+  --owl-text-primary: #e8e3d8;  /* Light cream for better readability */
+  --owl-text-secondary: #c4bfb2; /* Softer beige for secondary text */
+  --owl-accent-1: #e64b35;      /* Bright red for links */
+  --owl-accent-2: #fbcd43;      /* Gold for important elements */
+  --owl-accent-3: #992d3c;      /* Wine red */
+  --owl-border-color: #3a3632;  /* Subtle border */
+  --owl-shadow-color: rgba(0, 0, 0, 0.2); /* Lighter shadow */
+  
+  /* Dark warm background - simpler */
+  background: #1a1815 !important;
+  min-height: 100vh;
+  color: var(--owl-text-primary) !important;
+}
+
+/* Body and main containers */
+html.owl-retro-dark body {
+  background-color: transparent !important;
+  color: var(--owl-text-primary) !important;
+}
+
+/* Headers with better contrast */
+html.owl-retro-dark h1,
+html.owl-retro-dark h2,
+html.owl-retro-dark h3,
+html.owl-retro-dark h4,
+html.owl-retro-dark h5,
+html.owl-retro-dark h6 {
+  color: var(--owl-accent-2) !important;  /* Gold for headers */
+  text-shadow: none;
+}
+
+/* Links with red accent */
+html.owl-retro-dark a {
+  color: var(--owl-accent-1) !important;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+html.owl-retro-dark a:hover {
+  color: var(--owl-accent-2) !important;
+  text-decoration: underline;
+}
+
+/* Card and Container Effects - Minimal approach */
+html.owl-retro-dark article,
+html.owl-retro-dark section {
+  /* Only add subtle separation for main content */
+  border-bottom: 1px solid rgba(58, 54, 50, 0.3) !important;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Button Retro Style - Cleaner dark theme */
+html.owl-retro-dark button,
+html.owl-retro-dark [role="button"],
+html.owl-retro-dark input[type="button"],
+html.owl-retro-dark input[type="submit"] {
+  background: var(--owl-bg-tertiary) !important;
+  color: var(--owl-text-primary) !important;
+  border: 1px solid rgba(58, 54, 50, 0.5) !important;
+  border-radius: 3px !important;
+  transition: all 0.2s ease;
+}
+
+html.owl-retro-dark button:hover,
+html.owl-retro-dark [role="button"]:hover {
+  background: var(--owl-accent-3) !important;
+  border-color: var(--owl-accent-1) !important;
+}
+
+/* Input Fields */
+html.owl-retro-dark input,
+html.owl-retro-dark textarea,
+html.owl-retro-dark select {
+  background-color: var(--owl-bg-secondary) !important;
+  color: var(--owl-text-secondary) !important;
+  border: 1px solid var(--owl-border-color) !important;
+  border-radius: 2px !important;
+}
+
+html.owl-retro-dark input:focus,
+html.owl-retro-dark textarea:focus {
+  border-color: var(--owl-text-primary) !important;
+  box-shadow: 0 0 0 2px rgba(251, 205, 67, 0.2) !important;
+  outline: none !important;
+}
+
+/* Table Retro Style - Cleaner */
+html.owl-retro-dark table {
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  background-color: var(--owl-bg-primary) !important;
+}
+
+html.owl-retro-dark th,
+html.owl-retro-dark td {
+  border-bottom: 1px solid rgba(58, 54, 50, 0.3) !important;
+  padding: 8px !important;
+  background-color: transparent !important;
+  color: var(--owl-text-primary) !important;
+}
+
+html.owl-retro-dark th {
+  background: var(--owl-bg-tertiary) !important;
+  color: var(--owl-accent-2) !important;
+  border-bottom: 2px solid var(--owl-accent-3) !important;
+}
+
+/* Scrollbar Styling */
+html.owl-retro-dark ::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+html.owl-retro-dark ::-webkit-scrollbar-track {
+  background: var(--owl-bg-primary);
+  border: 1px solid var(--owl-border-color);
+}
+
+html.owl-retro-dark ::-webkit-scrollbar-thumb {
+  background: var(--owl-bg-tertiary);
+  border-radius: 2px;
+  border: 1px solid var(--owl-border-color);
+}
+
+html.owl-retro-dark ::-webkit-scrollbar-thumb:hover {
+  background: var(--owl-accent-3);
+}
+
+/* Code Blocks */
+html.owl-retro-dark pre,
+html.owl-retro-dark code {
+  background-color: var(--owl-bg-secondary) !important;
+  color: var(--owl-text-primary) !important;
+  border: 1px solid var(--owl-border-color) !important;
+  border-radius: 2px !important;
+  padding: 4px 8px !important;
+}
+
+/* Monospace Font Override */
+html.owl-font {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace !important;
+}
+
+html.owl-font * {
+  font-family: inherit !important;
+}
+
+/* Font Exceptions - Preserve Original */
+html.owl-font :is(code, pre, .fa, .fas, .far, .fab, .material-icons, svg, math) {
+  font-family: initial !important;
+}
+
+/* Icon Font Classes Exception */
+html.owl-font [class*="icon"]:before,
+html.owl-font [class*="icon"]:after {
+  font-family: initial !important;
+}
+
+/* DYNAMIC DARK MODE - Minimal approach */
+
+/* Universal background fix - simpler */
+html.owl-retro-dark body,
+html.owl-retro-dark main,
+html.owl-retro-dark article,
+html.owl-retro-dark section,
+html.owl-retro-dark aside,
+html.owl-retro-dark nav,
+html.owl-retro-dark header,
+html.owl-retro-dark footer,
+html.owl-retro-dark div[role="main"],
+html.owl-retro-dark div[role="navigation"],
+html.owl-retro-dark div[role="complementary"] {
+  background: var(--owl-bg-primary) !important;
+  color: var(--owl-text-primary) !important;
+}
+
+/* Cards and posts - minimal borders */
+html.owl-retro-dark [class*="card"],
+html.owl-retro-dark [class*="Card"],
+html.owl-retro-dark [class*="post"],
+html.owl-retro-dark [class*="Post"],
+html.owl-retro-dark [class*="tweet"],
+html.owl-retro-dark [class*="Tweet"],
+html.owl-retro-dark article[role="article"],
+html.owl-retro-dark div[role="article"] {
+  background: var(--owl-bg-secondary) !important;
+  border: 1px solid rgba(58, 54, 50, 0.2) !important;
+  border-radius: 4px !important;
+  margin: 8px 0 !important;
+  padding: 12px !important;
+}
+
+/* Sidebars - minimal styling */
+html.owl-retro-dark [class*="sidebar"],
+html.owl-retro-dark [class*="Sidebar"],
+html.owl-retro-dark nav[role="navigation"] {
+  background: var(--owl-bg-secondary) !important;
+  border-right: 1px solid rgba(58, 54, 50, 0.2) !important;
+}
+
+/* Modals and dialogs - cleaner */
+html.owl-retro-dark [class*="modal"],
+html.owl-retro-dark [class*="Modal"],
+html.owl-retro-dark [class*="dialog"],
+html.owl-retro-dark [class*="Dialog"],
+html.owl-retro-dark [role="dialog"] {
+  background: var(--owl-bg-tertiary) !important;
+  border: 1px solid var(--owl-border-color) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Text color fixes for better readability */
+html.owl-retro-dark * {
+  color: var(--owl-text-primary) !important;
+}
+
+html.owl-retro-dark h1,
+html.owl-retro-dark h2,
+html.owl-retro-dark h3,
+html.owl-retro-dark h4,
+html.owl-retro-dark h5,
+html.owl-retro-dark h6 {
+  color: var(--owl-accent-2) !important;
+}
+
+html.owl-retro-dark a {
+  color: var(--owl-accent-1) !important;
+}
+
+/* Input fields and form elements */
+html.owl-retro-dark input:not([type="checkbox"]):not([type="radio"]),
+html.owl-retro-dark textarea,
+html.owl-retro-dark select {
+  background: var(--owl-bg-tertiary) !important;
+  color: var(--owl-text-primary) !important;
+  border: 1px solid var(--owl-border-color) !important;
+}
+
+/* YouTube specific fixes */
+html.owl-retro-dark ytd-app,
+html.owl-retro-dark ytd-mini-guide-renderer,
+html.owl-retro-dark ytd-guide-renderer,
+html.owl-retro-dark tp-yt-app-drawer {
+  background: var(--owl-bg-primary) !important;
+}
+
+/* YouTube sidebar fix */
+html.owl-retro-dark #guide-inner-content,
+html.owl-retro-dark ytd-mini-guide-entry-renderer,
+html.owl-retro-dark ytd-guide-entry-renderer {
+  background: transparent !important;
+}
+
+/* YouTube menu items */
+html.owl-retro-dark ytd-guide-entry-renderer:hover,
+html.owl-retro-dark ytd-mini-guide-entry-renderer:hover {
+  background: var(--owl-bg-tertiary) !important;
+}
+
+/* Important site containers - less aggressive */
+html.owl-retro-dark div:not([class]):not([id]) {
+  background-color: transparent !important;
+}
+
+/* Shared Monospace Font Override (same as light) */
+html.owl-font {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace !important;
+}
+
+html.owl-font * {
+  font-family: inherit !important;
+}
+
+/* Font Exceptions - Preserve Original */
+html.owl-font :is(code, pre, .fa, .fas, .far, .fab, .material-icons, svg, math) {
+  font-family: initial !important;
+}
+
+/* Icon Font Classes Exception */
+html.owl-font [class*="icon"]:before,
+html.owl-font [class*="icon"]:after {
+  font-family: initial !important;
+}

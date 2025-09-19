@@ -1,0 +1,79 @@
+/**
+ * Owl Retro - Minimal Theme
+ * Backup theme with minimal changes for problematic sites
+ * NO FILTERS - Only background and text color changes
+ */
+
+/* Light Theme - Minimal changes */
+html.owl-retro-minimal-light {
+  /* Sadece arka plan için hafif retro ton */
+  background-color: #faf8f3 !important;
+}
+
+html.owl-retro-minimal-light body {
+  background-color: transparent !important;
+  color: #685a3c !important;
+}
+
+/* Dark Theme - Minimal changes */  
+html.owl-retro-minimal-dark {
+  /* Koyu tema için hafif sıcak ton */
+  background-color: #1a1815 !important;
+}
+
+html.owl-retro-minimal-dark body {
+  background-color: transparent !important;
+  color: #b7b2a5 !important;
+}
+
+/* Performance Mode - NO effects, only essential colors */
+html.owl-retro-performance {
+  /* Variables only, no complex effects */
+  --owl-bg: #faf8f3;
+  --owl-text: #685a3c;
+  --owl-link: #e64b35;
+  background-color: var(--owl-bg) !important;
+  color: var(--owl-text) !important;
+}
+
+html.owl-retro-performance a {
+  color: var(--owl-link) !important;
+}
+
+/* Monospace Font - Universal */
+html.owl-font {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace !important;
+}
+
+html.owl-font * {
+  font-family: inherit !important;
+}
+
+/* Font Exceptions */
+html.owl-font :is(code, pre, .fa, .fas, .far, .fab, .material-icons, svg, math, [class*="icon"]) {
+  font-family: initial !important;
+}
+
+html.owl-font [class*="icon"]:before,
+html.owl-font [class*="icon"]:after {
+  font-family: initial !important;
+}
+
+/* Monospace Font - Korundu */
+html.owl-font {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace !important;
+}
+
+html.owl-font * {
+  font-family: inherit !important;
+}
+
+/* Font İstisnaları */
+html.owl-font :is(code, pre, .fa, .fas, .far, .fab, .material-icons, svg, math, [class*="icon"]) {
+  font-family: initial !important;
+}
+
+html.owl-font [class*="icon"]:before,
+html.owl-font [class*="icon"]:after {
+  font-family: initial !important;
+}

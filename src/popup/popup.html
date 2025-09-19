@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Owl Retro</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <header class="header">
+      <div class="logo">
+        <img src="../../icons/icon48.png" alt="Owl Retro" width="32" height="32">
+        <h1>Owl Retro</h1>
+      </div>
+      <div class="status">
+        <span id="status-text">Active</span>
+        <span class="status-dot active"></span>
+      </div>
+    </header>
+
+    <main class="controls">
+      <!-- Enable/Disable Toggle -->
+      <div class="control-group">
+        <label for="enable-toggle" class="control-label">
+          <span>Enable Theme</span>
+          <label class="toggle-switch">
+            <input type="checkbox" id="enable-toggle" checked>
+            <span class="toggle-slider"></span>
+          </label>
+        </label>
+      </div>
+
+      <!-- Theme Mode Selector -->
+      <div class="control-group">
+        <label class="control-label">Theme Mode</label>
+        <div class="button-group">
+          <button class="mode-btn" data-mode="light" title="Light Mode">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+          <button class="mode-btn active" data-mode="auto" title="Auto Mode">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="9"></circle>
+              <path d="M12 3v18"></path>
+              <path d="M12 3c2.5 0 4.5 2 4.5 4.5S14.5 12 12 12"></path>
+              <path d="M12 12c2.5 0 4.5 2 4.5 4.5S14.5 21 12 21"></path>
+            </svg>
+          </button>
+          <button class="mode-btn" data-mode="dark" title="Dark Mode">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Monospace Font Toggle -->
+      <div class="control-group">
+        <label for="font-toggle" class="control-label">
+          <span>Monospace Font</span>
+          <label class="toggle-switch">
+            <input type="checkbox" id="font-toggle" checked>
+            <span class="toggle-slider"></span>
+          </label>
+        </label>
+      </div>
+
+      <!-- Intensity Slider -->
+      <div class="control-group">
+        <label class="control-label">
+          <span>Color Intensity</span>
+          <span id="intensity-value">80%</span>
+        </label>
+        <input type="range" id="intensity-slider" min="50" max="100" value="80" step="5">
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Site-specific Controls -->
+      <div class="control-group">
+        <label class="control-label">This Site</label>
+        <div class="site-info">
+          <span id="current-site" class="site-name">Loading...</span>
+        </div>
+        <div class="button-group">
+          <button id="allow-site" class="site-btn" title="Always allow on this site">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            Allow
+          </button>
+          <button id="block-site" class="site-btn" title="Never run on this site">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+            Block
+          </button>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Footer Actions -->
+      <div class="footer-actions">
+        <button id="clear-cache" class="text-btn" title="Clear cache for this site">
+          Clear Cache
+        </button>
+        <button id="options-btn" class="text-btn" title="Open settings">
+          Settings
+        </button>
+      </div>
+    </main>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

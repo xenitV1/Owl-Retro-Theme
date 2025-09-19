@@ -1,0 +1,63 @@
+{
+  "manifest_version": 3,
+  "name": "Owl Retro - Retro Theme Converter",
+  "version": "1.0.0",
+  "description": "Transform any website into a beautiful retro theme with customizable light/dark modes and monospace fonts",
+  "author": "Owl Retro Team",
+  
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "Owl Retro Theme"
+  },
+  
+  "options_page": "src/options/options.html",
+  
+  "background": {
+    "service_worker": "src/background/service-worker.js"
+  },
+  
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content/content.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  
+  "permissions": [
+    "storage",
+    "activeTab",
+    "alarms"
+  ],
+  
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "src/styles/retro-light.css",
+        "src/styles/retro-dark.css",
+        "icons/*"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}
