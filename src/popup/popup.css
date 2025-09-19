@@ -302,3 +302,22 @@ input:checked + .toggle-slider:before {
   width: 16px;
   height: 16px;
 }
+
+/* Credits Footer */
+.credits-footer {
+  margin-top: 12px;
+  padding: 8px;
+  text-align: center;
+  border-top: 1px solid var(--border);
+}
+
+.credits-text {
+  font-size: 10px;
+  color: var(--neutral);
+  font-weight: 400;
+}
+
+.credits-text strong {
+  color: var(--tertiary);
+  font-weight: 600;
+}
