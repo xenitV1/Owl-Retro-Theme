@@ -1,4 +1,4 @@
-﻿# 🦉 Owl Retro - Retro Theme Chrome Extension
+﻿# 🦉 Owl-App - Retro Theme Chrome Extension
 
 ## 🙏 Special Thanks
 
