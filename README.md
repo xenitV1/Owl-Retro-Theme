@@ -1,4 +1,10 @@
-# 🦉 Owl Retro - Retro Theme Chrome Extension
+﻿# 🦉 Owl Retro - Retro Theme Chrome Extension
+
+## 🙏 Special Thanks
+
+Special thanks to **Nikola** ([@nikolaNoUndo](https://x.com/nikolaNoUndo)) for the inspiration behind this retro theme concept. Your vision sparked the idea that became Owl Retro!
+
+---
 
 Transform any website into a beautiful retro-themed experience with customizable light/dark modes and monospace fonts.
 
@@ -110,6 +116,8 @@ MIT License - feel free to use and modify as needed.
 ## 🙏 Credits
 
 Created with ❤️ by the Owl Retro Team
+
+Special thanks to **Nikola** ([@nikolaNoUndo](https://x.com/nikolaNoUndo)) for the inspiration behind this retro theme concept.
 
 ---
 
