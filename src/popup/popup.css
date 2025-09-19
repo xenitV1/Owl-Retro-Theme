@@ -1,4 +1,4 @@
-/* Owl Retro Popup Styles */
+﻿/* Owl Retro Popup Styles */
 
 :root {
   --primary: #fbcd43;
@@ -254,7 +254,8 @@ input:checked + .toggle-slider:before {
 /* Footer Actions */
 .footer-actions {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .text-btn {
@@ -266,9 +267,38 @@ input:checked + .toggle-slider:before {
   font-size: 12px;
   font-weight: 500;
   transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
 }
 
 .text-btn:hover {
   color: var(--quaternary);
   text-decoration: underline;
+}
+
+/* Owl App Button Styling */
+.owl-btn {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  border: 2px solid var(--primary);
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 10px 16px;
+  box-shadow: 0 2px 4px var(--shadow);
+}
+
+.owl-btn:hover {
+  background: linear-gradient(135deg, var(--secondary), var(--tertiary));
+  border-color: var(--secondary);
+  color: white;
+  text-decoration: none;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px var(--shadow);
+}
+
+.owl-btn svg {
+  width: 16px;
+  height: 16px;
 }

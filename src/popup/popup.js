@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Owl Retro - Popup Controller
  * Popup arayüzü kontrol scripti
  */
@@ -241,5 +241,13 @@ function setupEventListeners() {
   // Options button
   document.getElementById('options-btn').addEventListener('click', () => {
     chrome.runtime.openOptionsPage();
+  });
+  
+  // Visit Owl App button
+  document.getElementById('visit-owl-app').addEventListener('click', () => {
+    chrome.tabs.create({
+      url: 'https://owl-app.com',
+      active: true
+    });
   });
 }
