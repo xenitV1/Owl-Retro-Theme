@@ -64,6 +64,8 @@
         "src/styles/retro-light.css",
         "src/styles/retro-dark.css",
         "src/styles/retro-minimal.css",
+        "src/styles/white-space-detector.css",
+        "src/styles/dark-space-detector.css",
         "icons/*",
         "src/utils/site-specific-optimizations.js",
         "src/utils/css-injection/*",
@@ -88,6 +90,10 @@
   },
 
   "browser_specific_settings": {
+    "gecko": {
+      "id": "owl-retro-theme@owlretro.com",
+      "strict_min_version": "109.0"
+    },
     "edge": {
       "update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx"
     }
