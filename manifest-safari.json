@@ -1,0 +1,92 @@
+{
+  "manifest_version": 3,
+  "name": "Owl Retro - Retro Theme Converter",
+  "version": "1.0.0",
+  "description": "Transform any website into a beautiful retro theme with customizable light/dark modes and monospace fonts",
+  "author": "Owl Retro Team",
+
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "Owl Retro Theme"
+  },
+
+  "options_page": "src/options/options.html",
+
+  "background": {
+    "service_worker": "src/background/service-worker.js",
+    "type": "module"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": [
+        "src/utils/browser-compatibility.js",
+        "src/utils/spa-detector.js",
+        "src/utils/dynamic-content-handler.js",
+        "src/utils/css-injection/index.js",
+        "src/content/content.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+
+  "permissions": [
+    "storage",
+    "activeTab",
+    "alarms"
+  ],
+
+  "host_permissions": [
+    "<all_urls>"
+  ],
+
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "src/styles/retro-light.css",
+        "src/styles/retro-dark.css",
+        "src/styles/retro-minimal.css",
+        "icons/*",
+        "src/utils/site-specific-optimizations.js",
+        "src/utils/css-injection/*",
+        "src/utils/css-injection/index.js",
+        "src/utils/browser-compatibility.js",
+        "src/utils/spa-detector.js",
+        "src/utils/dynamic-content-handler.js",
+        "src/utils/color-utils.js",
+        "src/utils/constants.js",
+        "src/utils/storage.js",
+        "src/utils/storage-optimization.js",
+        "src/utils/network-optimization.js",
+        "src/utils/resource-management.js"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
+
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
+
+  "browser_specific_settings": {
+    "safari": {
+      "strict_min_version": "16.0",
+      "strict_max_version": "*"
+    }
+  },
+
+  "manifest_version_name": "3"
+}
