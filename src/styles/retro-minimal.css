@@ -77,3 +77,80 @@ html.owl-font [class*="icon"]:before,
 html.owl-font [class*="icon"]:after {
   font-family: initial !important;
 }
+
+/* ============================================
+   WHITE SPACE DETECTION - MINIMAL THEME
+   Basic white space detection for minimal theme compatibility
+   ============================================ */
+
+/* Light Theme - Minimal White Space Detection */
+html.owl-retro-minimal-light [style*="background-color: rgb(255, 255, 255)"],
+html.owl-retro-minimal-light [style*="background-color: #fff"],
+html.owl-retro-minimal-light [style*="background-color: #ffffff"],
+html.owl-retro-minimal-light [style*="background-color: white"],
+html.owl-retro-minimal-light [style*="background: rgb(255, 255, 255)"],
+html.owl-retro-minimal-light [style*="background: #fff"],
+html.owl-retro-minimal-light [style*="background: #ffffff"],
+html.owl-retro-minimal-light [style*="background: white"] {
+  background-color: #faf8f3 !important;
+}
+
+/* Dark Theme - Minimal White Space Detection */
+html.owl-retro-minimal-dark [style*="background-color: rgb(255, 255, 255)"],
+html.owl-retro-minimal-dark [style*="background-color: #fff"],
+html.owl-retro-minimal-dark [style*="background-color: #ffffff"],
+html.owl-retro-minimal-dark [style*="background-color: white"],
+html.owl-retro-minimal-dark [style*="background: rgb(255, 255, 255)"],
+html.owl-retro-minimal-dark [style*="background: #fff"],
+html.owl-retro-minimal-dark [style*="background: #ffffff"],
+html.owl-retro-minimal-dark [style*="background: white"] {
+  background-color: #1a1815 !important;
+}
+
+/* Performance Mode - Minimal White Space Detection */
+html.owl-retro-performance [style*="background-color: rgb(255, 255, 255)"],
+html.owl-retro-performance [style*="background-color: #fff"],
+html.owl-retro-performance [style*="background-color: #ffffff"],
+html.owl-retro-performance [style*="background-color: white"],
+html.owl-retro-performance [style*="background: rgb(255, 255, 255)"],
+html.owl-retro-performance [style*="background: #fff"],
+html.owl-retro-performance [style*="background: #ffffff"],
+html.owl-retro-performance [style*="background: white"] {
+  background-color: #faf8f3 !important;
+}
+
+/* ============================================
+   DARK SPACE DETECTION - MINIMAL THEME
+   Minimal tema için koyu alanları tespit et
+   ============================================ */
+
+/* Performance Mode - Dark Space Detection */
+html.owl-retro-performance [style*="background-color: rgb(0, 0, 0)"],
+html.owl-retro-performance [style*="background-color: #000"],
+html.owl-retro-performance [style*="background-color: #000000"],
+html.owl-retro-performance [style*="background-color: black"],
+html.owl-retro-performance [style*="background: rgb(0, 0, 0)"],
+html.owl-retro-performance [style*="background: #000"],
+html.owl-retro-performance [style*="background: #000000"],
+html.owl-retro-performance [style*="background: black"] {
+  background-color: #1a1815 !important;
+  color: #e8e3d8 !important;
+}
+
+/* Light Theme Minimal - Dark Space Detection */
+html.owl-retro-minimal-light [style*="background-color: rgb(0, 0, 0)"],
+html.owl-retro-minimal-light [style*="background-color: #000"],
+html.owl-retro-minimal-light [style*="background-color: #000000"],
+html.owl-retro-minimal-light [style*="background-color: black"] {
+  background-color: #faf8f3 !important;
+  color: #685a3c !important;
+}
+
+/* Dark Theme Minimal - White Space Detection */
+html.owl-retro-minimal-dark [style*="background-color: rgb(255, 255, 255)"],
+html.owl-retro-minimal-dark [style*="background-color: #fff"],
+html.owl-retro-minimal-dark [style*="background-color: #ffffff"],
+html.owl-retro-minimal-dark [style*="background-color: white"] {
+  background-color: #1a1815 !important;
+  color: #e8e3d8 !important;
+}

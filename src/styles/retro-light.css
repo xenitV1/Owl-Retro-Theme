@@ -1,12 +1,89 @@
 /**
- * Owl Retro - Light Theme
- * Minimal Retro Style - Less borders, cleaner look
- * Palette: #fbcd43 (gold), #e64b35 (red), #c6312b, #992d3c, #6d2744, #b7b2a5, #685a3c
+ * Owl Retro - Light Theme (2024-2025)
+ * Enhanced Cross-Browser Compatibility
+ * Modern CSS Reset + Vendor Prefixes + Browser-Specific Fixes
+ * Supports: Chrome 90+, Firefox 88+, Safari 14+, Edge 90+
  */
 
-/* CSS Variables for Light Theme */
+/* ============================================
+   SAFE CSS RESET (2024-2025)
+   Cross-browser normalization WITHOUT breaking site layout
+   ============================================ */
+
+/* Only reset box-sizing for our theme elements - NOT all elements */
 html.owl-retro-light {
-  /* Retro Color Variables - More Harmonious */
+  box-sizing: border-box;
+}
+
+/* Only apply box-sizing to our specific selectors, not all elements */
+html.owl-retro-light body,
+html.owl-retro-light div,
+html.owl-retro-light span,
+html.owl-retro-light p,
+html.owl-retro-light h1,
+html.owl-retro-light h2,
+html.owl-retro-light h3,
+html.owl-retro-light h4,
+html.owl-retro-light h5,
+html.owl-retro-light h6,
+html.owl-retro-light ul,
+html.owl-retro-light ol,
+html.owl-retro-light li,
+html.owl-retro-light blockquote,
+html.owl-retro-light pre,
+html.owl-retro-light code,
+html.owl-retro-light table,
+html.owl-retro-light th,
+html.owl-retro-light td,
+html.owl-retro-light form,
+html.owl-retro-light input,
+html.owl-retro-light textarea,
+html.owl-retro-light button,
+html.owl-retro-light select,
+html.owl-retro-light article,
+html.owl-retro-light section,
+html.owl-retro-light header,
+html.owl-retro-light footer,
+html.owl-retro-light nav,
+html.owl-retro-light aside,
+html.owl-retro-light main {
+  box-sizing: border-box;
+}
+
+/* Only reset specific elements that we want to style */
+html.owl-retro-light h1,
+html.owl-retro-light h2,
+html.owl-retro-light h3,
+html.owl-retro-light h4,
+html.owl-retro-light h5,
+html.owl-retro-light h6 {
+  margin: 0;
+}
+
+html.owl-retro-light p,
+html.owl-retro-light ul,
+html.owl-retro-light ol {
+  margin: 0;
+}
+
+html.owl-retro-light blockquote,
+html.owl-retro-light pre {
+  margin: 0;
+}
+
+/* ============================================
+   CSS VARIABLES WITH FALLBACKS (2024-2025)
+   Modern CSS custom properties with browser support
+   ============================================ */
+
+/* CSS Variables with cross-browser fallbacks */
+html.owl-retro-light {
+  /* Fallbacks for browsers without CSS custom property support */
+  background: #faf8f3;
+  min-height: 100vh;
+  color: #685a3c;
+
+  /* Modern CSS Variables (2024-2025) */
   --owl-bg-primary: #faf8f3;
   --owl-bg-secondary: #f5f2ea;
   --owl-bg-tertiary: #ede9e0;
@@ -17,8 +94,29 @@ html.owl-retro-light {
   --owl-accent-3: #b7b2a5;      /* Beige for subtle highlights */
   --owl-border-color: #d4cfc4;  /* Soft beige for borders */
   --owl-shadow-color: rgba(104, 90, 60, 0.08); /* Subtle brown shadow */
-  
-  /* Warm cream background */
+
+  /* Modern CSS Variables for enhanced features */
+  --owl-border-radius: 3px;
+  --owl-transition: all 0.2s ease;
+  --owl-scrollbar-width: 12px;
+  --owl-scrollbar-height: 12px;
+
+  /* CSS Grid and Flexbox variables */
+  --owl-grid-gap: 1rem;
+  --owl-flex-gap: 1rem;
+
+  /* Typography variables */
+  --owl-font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  --owl-font-size: 1rem;
+  --owl-line-height: 1.5;
+
+  /* Animation variables */
+  --owl-animation-duration: 0.2s;
+  --owl-animation-timing: ease;
+}
+
+/* Warm cream background */
+html.owl-retro-light {
   background: #faf8f3 !important;
   min-height: 100vh;
   color: var(--owl-text-secondary) !important;
@@ -84,7 +182,7 @@ html.owl-retro-light [role="button"]:hover {
 html.owl-retro-light input,
 html.owl-retro-light textarea,
 html.owl-retro-light select {
-  background-color: rgba(255, 255, 255, 0.8) !important;
+  background-color: var(--owl-bg-secondary) !important;
   color: var(--owl-text-secondary) !important;
   border: 1px solid var(--owl-border-color) !important;
   border-radius: 2px !important;
@@ -118,7 +216,12 @@ html.owl-retro-light th {
   border-bottom: 2px solid var(--owl-accent-2) !important;
 }
 
-/* Scrollbar Styling */
+/* ============================================
+   SCROLLBAR STYLING - CROSS-BROWSER (2024-2025)
+   Enhanced scrollbar styling for all browsers
+   ============================================ */
+
+/* WebKit browsers (Chrome, Safari, Edge, Vivaldi) */
 html.owl-retro-light ::-webkit-scrollbar {
   width: 12px;
   height: 12px;
@@ -139,10 +242,30 @@ html.owl-retro-light ::-webkit-scrollbar-thumb:hover {
   background: var(--owl-accent-2);
 }
 
+/* Firefox scrollbar styling */
+html.owl-retro-light {
+  scrollbar-width: thin;
+  scrollbar-color: var(--owl-accent-3) var(--owl-bg-secondary);
+}
+
+/* Enhanced scrollbar styling for better visibility */
+html.owl-retro-light body {
+  scrollbar-face-color: var(--owl-accent-3);
+  scrollbar-track-color: var(--owl-bg-secondary);
+  scrollbar-arrow-color: var(--owl-text-primary);
+  scrollbar-shadow-color: var(--owl-shadow-color);
+}
+
+/* Scrollbar styling for all scrollable elements */
+html.owl-retro-light * {
+  scrollbar-width: thin;
+  scrollbar-color: var(--owl-accent-3) var(--owl-bg-secondary);
+}
+
 /* Code Blocks */
 html.owl-retro-light pre,
 html.owl-retro-light code {
-  background-color: rgba(255, 255, 255, 0.9) !important;
+  background-color: var(--owl-bg-secondary) !important;
   color: var(--owl-text-primary) !important;
   border: 1px solid var(--owl-border-color) !important;
   border-radius: 2px !important;
@@ -157,27 +280,104 @@ html.owl-retro-light blockquote {
   margin: 16px 0 !important;
 }
 
-/* Monospace Font Override */
+/* ============================================
+   MONOSPACE FONT OVERRIDE (2024-2025)
+   Only applied when user explicitly enables it
+   ============================================ */
+
+/* Only override font when user specifically enables monospace */
 html.owl-font {
   font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace !important;
 }
 
-html.owl-font * {
+/* Only inherit font for specific elements we want to affect */
+html.owl-font body,
+html.owl-font p,
+html.owl-font div,
+html.owl-font span,
+html.owl-font h1,
+html.owl-font h2,
+html.owl-font h3,
+html.owl-font h4,
+html.owl-font h5,
+html.owl-font h6,
+html.owl-font li,
+html.owl-font blockquote,
+html.owl-font article,
+html.owl-font section {
   font-family: inherit !important;
 }
 
-/* Font Exceptions - Preserve Original */
+/* Font Exceptions - Preserve Original Icons and Code */
 html.owl-font :is(code, pre, .fa, .fas, .far, .fab, .material-icons, svg, math) {
   font-family: initial !important;
 }
 
-/* Icon Font Classes Exception */
 html.owl-font [class*="icon"]:before,
 html.owl-font [class*="icon"]:after {
   font-family: initial !important;
 }
 
-/* DYNAMIC LIGHT MODE - Minimal approach */
+/* ============================================
+   DARK SPACE DETECTION - LIGHT THEME
+   Light tema için koyu alanları tespit edip tema ile değiştir
+   ============================================ */
+
+/* Pure black backgrounds - Ana tema rengi ile değiştir */
+html.owl-retro-light [style*="background-color: rgb(0, 0, 0)"],
+html.owl-retro-light [style*="background-color: #000"],
+html.owl-retro-light [style*="background-color: #000000"],
+html.owl-retro-light [style*="background-color: black"],
+html.owl-retro-light [style*="background: rgb(0, 0, 0)"],
+html.owl-retro-light [style*="background: #000"],
+html.owl-retro-light [style*="background: #000000"],
+html.owl-retro-light [style*="background: black"] {
+  background: var(--owl-bg-primary, #faf8f3) !important;
+  background-color: var(--owl-bg-primary, #faf8f3) !important;
+}
+
+/* Near-black backgrounds (0-15 range) - İkincil tema rengi ile değiştir */
+html.owl-retro-light [style*="background-color: rgb(0, 0, 0"],
+html.owl-retro-light [style*="background-color: rgb(1, 1, 1"],
+html.owl-retro-light [style*="background-color: rgb(2, 2, 2"],
+html.owl-retro-light [style*="background-color: rgb(3, 3, 3"],
+html.owl-retro-light [style*="background-color: rgb(4, 4, 4"],
+html.owl-retro-light [style*="background-color: rgb(5, 5, 5"],
+html.owl-retro-light [style*="background-color: rgb(6, 6, 6"],
+html.owl-retro-light [style*="background-color: rgb(7, 7, 7"],
+html.owl-retro-light [style*="background-color: rgb(8, 8, 8"],
+html.owl-retro-light [style*="background-color: rgb(9, 9, 9"],
+html.owl-retro-light [style*="background-color: rgb(10, 10, 10"],
+html.owl-retro-light [style*="background-color: rgb(11, 11, 11"],
+html.owl-retro-light [style*="background-color: rgb(12, 12, 12"],
+html.owl-retro-light [style*="background-color: rgb(13, 13, 13"],
+html.owl-retro-light [style*="background-color: rgb(14, 14, 14"],
+html.owl-retro-light [style*="background-color: rgb(15, 15, 15"] {
+  background: var(--owl-bg-secondary, #f5f2ea) !important;
+  background-color: var(--owl-bg-secondary, #f5f2ea) !important;
+}
+
+/* Dark utility classes - Light tema için açık renkle değiştir */
+html.owl-retro-light .bg-dark,
+html.owl-retro-light .bg-black,
+html.owl-retro-light [class*="dark-bg"],
+html.owl-retro-light [class*="black-bg"] {
+  background: var(--owl-bg-secondary, #f5f2ea) !important;
+}
+
+/* Dark elements in light theme */
+html.owl-retro-light [class*="dark"],
+html.owl-retro-light [class*="Dark"],
+html.owl-retro-light [class*="black"],
+html.owl-retro-light [class*="Black"] {
+  background: var(--owl-bg-secondary, #f5f2ea) !important;
+  color: var(--owl-text-primary, #6d2744) !important;
+}
+
+/* ============================================
+   DYNAMIC LIGHT MODE - Enhanced White Space Detection (2024-2025)
+   Comprehensive white space detection and theme color replacement
+   ============================================ */
 
 /* Universal background fix */
 html.owl-retro-light body,
@@ -193,6 +393,137 @@ html.owl-retro-light div[role="navigation"],
 html.owl-retro-light div[role="complementary"] {
   background: var(--owl-bg-primary) !important;
   color: var(--owl-text-secondary) !important;
+}
+
+/* ============================================
+   WHITE SPACE DETECTION AND REPLACEMENT
+   Comprehensive detection of white backgrounds and replacing with theme colors
+   ============================================ */
+
+/* Pure white backgrounds (255, 255, 255) */
+html.owl-retro-light [style*="background-color: rgb(255, 255, 255)"],
+html.owl-retro-light [style*="background-color: #fff"],
+html.owl-retro-light [style*="background-color: #ffffff"],
+html.owl-retro-light [style*="background-color: white"],
+html.owl-retro-light [style*="background: rgb(255, 255, 255)"],
+html.owl-retro-light [style*="background: #fff"],
+html.owl-retro-light [style*="background: #ffffff"],
+html.owl-retro-light [style*="background: white"] {
+  background: var(--owl-bg-primary) !important;
+  background-color: var(--owl-bg-primary) !important;
+}
+
+/* Near-white backgrounds (240-254 range) */
+html.owl-retro-light [style*="background-color: rgb(255, 255, 255"],
+html.owl-retro-light [style*="background-color: rgb(254, 254, 254"],
+html.owl-retro-light [style*="background-color: rgb(253, 253, 253"],
+html.owl-retro-light [style*="background-color: rgb(252, 252, 252"],
+html.owl-retro-light [style*="background-color: rgb(251, 251, 251"],
+html.owl-retro-light [style*="background-color: rgb(250, 250, 250"],
+html.owl-retro-light [style*="background-color: rgb(249, 249, 249"],
+html.owl-retro-light [style*="background-color: rgb(248, 248, 248"],
+html.owl-retro-light [style*="background-color: rgb(247, 247, 247"],
+html.owl-retro-light [style*="background-color: rgb(246, 246, 246"],
+html.owl-retro-light [style*="background-color: rgb(245, 245, 245"],
+html.owl-retro-light [style*="background-color: rgb(244, 244, 244"],
+html.owl-retro-light [style*="background-color: rgb(243, 243, 243"],
+html.owl-retro-light [style*="background-color: rgb(242, 242, 242"],
+html.owl-retro-light [style*="background-color: rgb(241, 241, 241"],
+html.owl-retro-light [style*="background-color: rgb(240, 240, 240"] {
+  background: var(--owl-bg-secondary) !important;
+  background-color: var(--owl-bg-secondary) !important;
+}
+
+/* Light gray backgrounds that should be themed */
+html.owl-retro-light [style*="background-color: rgb(248, 248, 248"],
+html.owl-retro-light [style*="background-color: rgb(245, 245, 245"],
+html.owl-retro-light [style*="background-color: rgb(242, 242, 242"],
+html.owl-retro-light [style*="background-color: rgb(238, 238, 238"],
+html.owl-retro-light [style*="background-color: rgb(235, 235, 235"],
+html.owl-retro-light [style*="background-color: rgb(232, 232, 232"],
+html.owl-retro-light [style*="background-color: rgb(228, 228, 228"],
+html.owl-retro-light [style*="background-color: rgb(224, 224, 224"],
+html.owl-retro-light [style*="background-color: rgb(220, 220, 220"],
+html.owl-retro-light [style*="background-color: rgb(216, 216, 216"],
+html.owl-retro-light [style*="background-color: rgb(212, 212, 212"],
+html.owl-retro-light [style*="background-color: rgb(208, 208, 208"],
+html.owl-retro-light [style*="background-color: rgb(204, 204, 204"],
+html.owl-retro-light [style*="background-color: rgb(200, 200, 200"],
+html.owl-retro-light [style*="background-color: rgb(196, 196, 196"],
+html.owl-retro-light [style*="background-color: rgb(192, 192, 192"],
+html.owl-retro-light [style*="background-color: rgb(188, 188, 188"],
+html.owl-retro-light [style*="background-color: rgb(184, 184, 184"],
+html.owl-retro-light [style*="background-color: rgb(180, 180, 180"] {
+  background: var(--owl-bg-tertiary) !important;
+  background-color: var(--owl-bg-tertiary) !important;
+}
+
+/* Container and layout backgrounds */
+html.owl-retro-light [class*="container"],
+html.owl-retro-light [class*="Container"],
+html.owl-retro-light [class*="wrapper"],
+html.owl-retro-light [class*="Wrapper"],
+html.owl-retro-light [class*="content"],
+html.owl-retro-light [class*="Content"],
+html.owl-retro-light [class*="main-content"],
+html.owl-retro-light [class*="Main-content"] {
+  background: var(--owl-bg-primary) !important;
+}
+
+/* Card-like elements */
+html.owl-retro-light [class*="card"],
+html.owl-retro-light [class*="Card"],
+html.owl-retro-light [class*="panel"],
+html.owl-retro-light [class*="Panel"],
+html.owl-retro-light [class*="tile"],
+html.owl-retro-light [class*="Tile"] {
+  background: var(--owl-bg-secondary) !important;
+  border: 1px solid var(--owl-border-color) !important;
+}
+
+/* Menu and navigation backgrounds */
+html.owl-retro-light [class*="menu"],
+html.owl-retro-light [class*="Menu"],
+html.owl-retro-light [class*="nav"],
+html.owl-retro-light [class*="Nav"],
+html.owl-retro-light [class*="navbar"],
+html.owl-retro-light [class*="Navbar"] {
+  background: var(--owl-bg-secondary) !important;
+}
+
+/* Modal and overlay backgrounds */
+html.owl-retro-light [class*="modal"],
+html.owl-retro-light [class*="Modal"],
+html.owl-retro-light [class*="overlay"],
+html.owl-retro-light [class*="Overlay"],
+html.owl-retro-light [class*="popup"],
+html.owl-retro-light [class*="Popup"] {
+  background: var(--owl-bg-primary) !important;
+  border: 1px solid var(--owl-border-color) !important;
+}
+
+/* Form element backgrounds */
+html.owl-retro-light input:not([type="checkbox"]):not([type="radio"]),
+html.owl-retro-light textarea,
+html.owl-retro-light select,
+html.owl-retro-light [class*="input"],
+html.owl-retro-light [class*="Input"] {
+  background: var(--owl-bg-secondary) !important;
+  color: var(--owl-text-secondary) !important;
+  border: 1px solid var(--owl-border-color) !important;
+}
+
+/* Table backgrounds */
+html.owl-retro-light table,
+html.owl-retro-light [class*="table"],
+html.owl-retro-light [class*="Table"] {
+  background: var(--owl-bg-primary) !important;
+}
+
+html.owl-retro-light th,
+html.owl-retro-light td {
+  background: transparent !important;
+  border-bottom: 1px solid var(--owl-border-color) !important;
 }
 
 /* Cards and posts - minimal borders */
@@ -225,7 +556,7 @@ html.owl-retro-light [class*="Modal"],
 html.owl-retro-light [class*="dialog"],
 html.owl-retro-light [class*="Dialog"],
 html.owl-retro-light [role="dialog"] {
-  background: white !important;
+  background: var(--owl-bg-primary) !important;
   border: 1px solid var(--owl-border-color) !important;
   box-shadow: 0 8px 24px rgba(104, 90, 60, 0.15) !important;
 }
@@ -251,11 +582,165 @@ html.owl-retro-light ytd-mini-guide-entry-renderer:hover {
   background: var(--owl-bg-secondary) !important;
 }
 
+/* ============================================
+   EDGE & VIVALDI SPECIFIC FIXES (2024-2025)
+   Enhanced compatibility for Chromium-based browsers
+   ============================================ */
+
+/* Edge-specific font rendering improvements */
+@supports (-ms-ime-align: auto) {
+  html.owl-retro-light {
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Vivaldi-specific scrollbar fixes */
+@supports (-webkit-appearance: none) {
+  html.owl-retro-light ::-webkit-scrollbar {
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  html.owl-retro-light ::-webkit-scrollbar-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background: var(--owl-accent-3) !important;
+    border: 1px solid var(--owl-border-color) !important;
+  }
+
+  html.owl-retro-light ::-webkit-scrollbar-track {
+    -webkit-appearance: none;
+    appearance: none;
+    background: var(--owl-bg-secondary) !important;
+    border: 1px solid var(--owl-border-color) !important;
+  }
+}
+
+/* Edge-specific flexbox fixes */
+@supports (-ms-flex: 1) {
+  html.owl-retro-light [class*="flex"],
+  html.owl-retro-light [class*="Flex"],
+  html.owl-retro-light [style*="flex"] {
+    -ms-flex: 1;
+    flex: 1;
+  }
+}
+
+/* Edge-specific grid layout fixes */
+@supports (-ms-grid: 1) {
+  html.owl-retro-light [class*="grid"],
+  html.owl-retro-light [class*="Grid"],
+  html.owl-retro-light [style*="grid"] {
+    display: -ms-grid;
+    display: grid;
+  }
+}
+
+/* Vivaldi-specific focus ring improvements */
+@supports (-webkit-focus-ring-color: transparent) {
+  html.owl-retro-light *:focus {
+    outline-color: var(--owl-accent-1) !important;
+    outline-offset: 2px !important;
+  }
+}
+
+/* Edge-specific transition fixes */
+@supports (-ms-transition: all) {
+  html.owl-retro-light * {
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }
+}
+
+/* Edge-specific transform fixes */
+@supports (-ms-transform: translateX(0)) {
+  html.owl-retro-light [class*="transform"],
+  html.owl-retro-light [style*="transform"] {
+    -ms-transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
+/* Enhanced Edge-specific fixes (Chromium 90+) */
+@supports (-ms-ime-align: auto) {
+  html.owl-retro-light {
+    /* Force hardware acceleration */
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+
+    /* Enhanced font rendering */
+    font-smooth: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Fix for Edge-specific layout issues */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  /* Edge-specific scrollbar fixes */
+  html.owl-retro-light ::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  html.owl-retro-light ::-webkit-scrollbar-track {
+    background: var(--owl-bg-secondary);
+    border: 1px solid var(--owl-border-color);
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+  }
+
+  html.owl-retro-light ::-webkit-scrollbar-thumb {
+    background: var(--owl-accent-3);
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    border: 1px solid var(--owl-border-color);
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  html.owl-retro-light ::-webkit-scrollbar-thumb:hover {
+    background: var(--owl-accent-2);
+  }
+}
+
+/* Vivaldi-specific backdrop-filter support */
+@supports (backdrop-filter: blur(10px)) {
+  html.owl-retro-light [class*="backdrop"],
+  html.owl-retro-light [class*="modal"],
+  html.owl-retro-light [class*="overlay"] {
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+  }
+}
+
+/* Edge-specific CSS Grid gap fixes */
+@supports (-ms-grid-columns: 1fr) {
+  html.owl-retro-light [style*="grid-gap"],
+  html.owl-retro-light [class*="grid-gap"] {
+    -ms-grid-gap: var(--owl-grid-gap);
+    grid-gap: var(--owl-grid-gap);
+  }
+}
+
 /* Input fields and form elements */
 html.owl-retro-light input:not([type="checkbox"]):not([type="radio"]),
 html.owl-retro-light textarea,
 html.owl-retro-light select {
-  background: white !important;
+  background: var(--owl-bg-secondary) !important;
   color: var(--owl-text-secondary) !important;
   border: 1px solid var(--owl-border-color) !important;
 }
@@ -265,22 +750,96 @@ html.owl-retro-light div:not([class]):not([id]) {
   background-color: transparent !important;
 }
 
-/* Monospace Font Override */
+/* ============================================
+   MONOSPACE FONT OVERRIDE (2024-2025)
+   Only applied when user explicitly enables it
+   ============================================ */
+
+/* Only override font when user specifically enables monospace */
 html.owl-font {
   font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace !important;
 }
 
-html.owl-font * {
+/* Only inherit font for specific elements we want to affect */
+html.owl-font body,
+html.owl-font p,
+html.owl-font div,
+html.owl-font span,
+html.owl-font h1,
+html.owl-font h2,
+html.owl-font h3,
+html.owl-font h4,
+html.owl-font h5,
+html.owl-font h6,
+html.owl-font li,
+html.owl-font blockquote,
+html.owl-font article,
+html.owl-font section {
   font-family: inherit !important;
 }
 
-/* Font Exceptions - Preserve Original */
+/* Font Exceptions - Preserve Original Icons and Code */
 html.owl-font :is(code, pre, .fa, .fas, .far, .fab, .material-icons, svg, math) {
   font-family: initial !important;
 }
 
-/* Icon Font Classes Exception */
 html.owl-font [class*="icon"]:before,
 html.owl-font [class*="icon"]:after {
   font-family: initial !important;
+}
+
+/* ============================================
+   DARK SPACE DETECTION - LIGHT THEME
+   Light tema için koyu alanları tespit edip tema ile değiştir
+   ============================================ */
+
+/* Pure black backgrounds - Ana tema rengi ile değiştir */
+html.owl-retro-light [style*="background-color: rgb(0, 0, 0)"],
+html.owl-retro-light [style*="background-color: #000"],
+html.owl-retro-light [style*="background-color: #000000"],
+html.owl-retro-light [style*="background-color: black"],
+html.owl-retro-light [style*="background: rgb(0, 0, 0)"],
+html.owl-retro-light [style*="background: #000"],
+html.owl-retro-light [style*="background: #000000"],
+html.owl-retro-light [style*="background: black"] {
+  background: var(--owl-bg-primary, #faf8f3) !important;
+  background-color: var(--owl-bg-primary, #faf8f3) !important;
+}
+
+/* Near-black backgrounds (0-15 range) - İkincil tema rengi ile değiştir */
+html.owl-retro-light [style*="background-color: rgb(0, 0, 0"],
+html.owl-retro-light [style*="background-color: rgb(1, 1, 1"],
+html.owl-retro-light [style*="background-color: rgb(2, 2, 2"],
+html.owl-retro-light [style*="background-color: rgb(3, 3, 3"],
+html.owl-retro-light [style*="background-color: rgb(4, 4, 4"],
+html.owl-retro-light [style*="background-color: rgb(5, 5, 5"],
+html.owl-retro-light [style*="background-color: rgb(6, 6, 6"],
+html.owl-retro-light [style*="background-color: rgb(7, 7, 7"],
+html.owl-retro-light [style*="background-color: rgb(8, 8, 8"],
+html.owl-retro-light [style*="background-color: rgb(9, 9, 9"],
+html.owl-retro-light [style*="background-color: rgb(10, 10, 10"],
+html.owl-retro-light [style*="background-color: rgb(11, 11, 11"],
+html.owl-retro-light [style*="background-color: rgb(12, 12, 12"],
+html.owl-retro-light [style*="background-color: rgb(13, 13, 13"],
+html.owl-retro-light [style*="background-color: rgb(14, 14, 14"],
+html.owl-retro-light [style*="background-color: rgb(15, 15, 15"] {
+  background: var(--owl-bg-secondary, #f5f2ea) !important;
+  background-color: var(--owl-bg-secondary, #f5f2ea) !important;
+}
+
+/* Dark utility classes - Light tema için açık renkle değiştir */
+html.owl-retro-light .bg-dark,
+html.owl-retro-light .bg-black,
+html.owl-retro-light [class*="dark-bg"],
+html.owl-retro-light [class*="black-bg"] {
+  background: var(--owl-bg-secondary, #f5f2ea) !important;
+}
+
+/* Dark elements in light theme */
+html.owl-retro-light [class*="dark"],
+html.owl-retro-light [class*="Dark"],
+html.owl-retro-light [class*="black"],
+html.owl-retro-light [class*="Black"] {
+  background: var(--owl-bg-secondary, #f5f2ea) !important;
+  color: var(--owl-text-primary, #6d2744) !important;
 }
