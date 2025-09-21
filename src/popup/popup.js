@@ -6,6 +6,17 @@
 let currentTab = null;
 let preferences = null;
 
+// Check if URL is valid for content script injection
+function isValidUrl(url) {
+  if (!url) return false;
+  try {
+    const urlObj = new URL(url);
+    return urlObj.protocol === 'http:' || urlObj.protocol === 'https:';
+  } catch {
+    return false;
+  }
+}
+
 // Initialize popup
 document.addEventListener('DOMContentLoaded', async () => {
   // Get current tab
@@ -83,15 +94,16 @@ function updateStatus(enabled) {
 async function savePreferences() {
   await chrome.storage.sync.set({ owl_preferences: preferences });
   
-  // Send message to current tab
-  if (currentTab && currentTab.id) {
+  // Send message to current tab if content script is available
+  if (currentTab && currentTab.id && isValidUrl(currentTab.url)) {
     try {
       await chrome.tabs.sendMessage(currentTab.id, {
         action: 'preferencesUpdated',
         preferences: preferences
       });
     } catch (error) {
-      console.error('Failed to send message to tab:', error);
+      // Content script not available - this is normal for some pages
+      console.log('Content script not available for this tab');
     }
   }
 }
@@ -105,11 +117,15 @@ function setupEventListeners() {
     await savePreferences();
     
     // Send toggle message to content script
-    if (currentTab && currentTab.id) {
-      chrome.tabs.sendMessage(currentTab.id, {
-        action: 'toggle',
-        enabled: e.target.checked
-      });
+    if (currentTab && currentTab.id && isValidUrl(currentTab.url)) {
+      try {
+        chrome.tabs.sendMessage(currentTab.id, {
+          action: 'toggle',
+          enabled: e.target.checked
+        });
+      } catch (error) {
+        console.log('Content script not available for toggle');
+      }
     }
   });
   
@@ -125,11 +141,15 @@ function setupEventListeners() {
       await savePreferences();
       
       // Send message to content script
-      if (currentTab && currentTab.id) {
-        chrome.tabs.sendMessage(currentTab.id, {
-          action: 'changeMode',
-          mode: btn.dataset.mode
-        });
+      if (currentTab && currentTab.id && isValidUrl(currentTab.url)) {
+        try {
+          chrome.tabs.sendMessage(currentTab.id, {
+            action: 'changeMode',
+            mode: btn.dataset.mode
+          });
+        } catch (error) {
+          console.log('Content script not available for mode change');
+        }
       }
     });
   });
@@ -140,11 +160,15 @@ function setupEventListeners() {
     await savePreferences();
     
     // Send message to content script
-    if (currentTab && currentTab.id) {
-      chrome.tabs.sendMessage(currentTab.id, {
-        action: 'toggleFont',
-        useMonospace: e.target.checked
-      });
+    if (currentTab && currentTab.id && isValidUrl(currentTab.url)) {
+      try {
+        chrome.tabs.sendMessage(currentTab.id, {
+          action: 'toggleFont',
+          useMonospace: e.target.checked
+        });
+      } catch (error) {
+        console.log('Content script not available for font toggle');
+      }
     }
   });
   
@@ -158,11 +182,15 @@ function setupEventListeners() {
     await savePreferences();
     
     // Send message to content script
-    if (currentTab && currentTab.id) {
-      chrome.tabs.sendMessage(currentTab.id, {
-        action: 'changeIntensity',
-        intensity: preferences.intensity
-      });
+    if (currentTab && currentTab.id && isValidUrl(currentTab.url)) {
+      try {
+        chrome.tabs.sendMessage(currentTab.id, {
+          action: 'changeIntensity',
+          intensity: preferences.intensity
+        });
+      } catch (error) {
+        console.log('Content script not available for intensity change');
+      }
     }
   });
   
