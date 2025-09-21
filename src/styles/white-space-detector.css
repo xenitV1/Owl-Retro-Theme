@@ -1,0 +1,379 @@
+/**
+ * Owl Retro - Advanced White Space Detector (2024-2025)
+ * Dynamic white space detection and theme color replacement system
+ * Uses advanced CSS selectors and modern web APIs for comprehensive detection
+ */
+
+/**
+ * Owl Retro - Advanced White Space Detector (2024-2025)
+ * Retro renk paleti ile uyumlu beyaz alan tespit sistemi
+ * Modern web standartlarında gelişmiş CSS selectors kullanır
+ */
+
+/* ============================================
+   WHITE SPACE DETECTION - RETRO PALETTE
+   Retro tema renkleri ile beyaz alanları değiştirme
+   ============================================ */
+
+/**
+ * Owl Retro - Advanced White Space Detector (2024-2025)
+ * Retro renk paleti ile uyumlu beyaz alan tespit sistemi
+ * Modern web standartlarında gelişmiş CSS selectors kullanır
+ */
+
+/* ============================================
+   WHITE SPACE DETECTION - RETRO PALETTE
+   Retro tema renkleri ile beyaz alanları değiştirme
+   ============================================ */
+
+/* Pure White Backgrounds (255, 255, 255) - Ana tema rengi ile değiştir */
+html[class*="owl-retro"] [style*="background-color: rgb(255, 255, 255)"],
+html[class*="owl-retro"] [style*="background-color: #fff"],
+html[class*="owl-retro"] [style*="background-color: #ffffff"],
+html[class*="owl-retro"] [style*="background-color: white"],
+html[class*="owl-retro"] [style*="background: rgb(255, 255, 255)"],
+html[class*="owl-retro"] [style*="background: #fff"],
+html[class*="owl-retro"] [style*="background: #ffffff"],
+html[class*="owl-retro"] [style*="background: white"] {
+  background: var(--owl-bg-primary, #faf8f3) !important;
+  background-color: var(--owl-bg-primary, #faf8f3) !important;
+}
+
+/* Near-white backgrounds (240-254 range) - İkincil tema rengi ile değiştir */
+html[class*="owl-retro"] [style*="background-color: rgb(255, 255, 255"],
+html[class*="owl-retro"] [style*="background-color: rgb(254, 254, 254"],
+html[class*="owl-retro"] [style*="background-color: rgb(253, 253, 253"],
+html[class*="owl-retro"] [style*="background-color: rgb(252, 252, 252"],
+html[class*="owl-retro"] [style*="background-color: rgb(251, 251, 251"],
+html[class*="owl-retro"] [style*="background-color: rgb(250, 250, 250"],
+html[class*="owl-retro"] [style*="background-color: rgb(249, 249, 249"],
+html[class*="owl-retro"] [style*="background-color: rgb(248, 248, 248"],
+html[class*="owl-retro"] [style*="background-color: rgb(247, 247, 247"],
+html[class*="owl-retro"] [style*="background-color: rgb(246, 246, 246"],
+html[class*="owl-retro"] [style*="background-color: rgb(245, 245, 245"],
+html[class*="owl-retro"] [style*="background-color: rgb(244, 244, 244"],
+html[class*="owl-retro"] [style*="background-color: rgb(243, 243, 243"],
+html[class*="owl-retro"] [style*="background-color: rgb(242, 242, 242"],
+html[class*="owl-retro"] [style*="background-color: rgb(241, 241, 241"],
+html[class*="owl-retro"] [style*="background-color: rgb(240, 240, 240"] {
+  background: var(--owl-bg-secondary, #f5f2ea) !important;
+  background-color: var(--owl-bg-secondary, #f5f2ea) !important;
+}
+
+/* Light gray backgrounds (180-239 range) */
+html[class*="owl-retro"] [style*="background-color: rgb(239, 239, 239"],
+html[class*="owl-retro"] [style*="background-color: rgb(238, 238, 238"],
+html[class*="owl-retro"] [style*="background-color: rgb(237, 237, 237"],
+html[class*="owl-retro"] [style*="background-color: rgb(236, 236, 236"],
+html[class*="owl-retro"] [style*="background-color: rgb(235, 235, 235"],
+html[class*="owl-retro"] [style*="background-color: rgb(234, 234, 234"],
+html[class*="owl-retro"] [style*="background-color: rgb(233, 233, 233"],
+html[class*="owl-retro"] [style*="background-color: rgb(232, 232, 232"],
+html[class*="owl-retro"] [style*="background-color: rgb(231, 231, 231"],
+html[class*="owl-retro"] [style*="background-color: rgb(230, 230, 230"],
+html[class*="owl-retro"] [style*="background-color: rgb(229, 229, 229"],
+html[class*="owl-retro"] [style*="background-color: rgb(228, 228, 228"],
+html[class*="owl-retro"] [style*="background-color: rgb(227, 227, 227"],
+html[class*="owl-retro"] [style*="background-color: rgb(226, 226, 226"],
+html[class*="owl-retro"] [style*="background-color: rgb(225, 225, 225"],
+html[class*="owl-retro"] [style*="background-color: rgb(224, 224, 224"],
+html[class*="owl-retro"] [style*="background-color: rgb(223, 223, 223"],
+html[class*="owl-retro"] [style*="background-color: rgb(222, 222, 222"],
+html[class*="owl-retro"] [style*="background-color: rgb(221, 221, 221"],
+html[class*="owl-retro"] [style*="background-color: rgb(220, 220, 220"],
+html[class*="owl-retro"] [style*="background-color: rgb(219, 219, 219"],
+html[class*="owl-retro"] [style*="background-color: rgb(218, 218, 218"],
+html[class*="owl-retro"] [style*="background-color: rgb(217, 217, 217"],
+html[class*="owl-retro"] [style*="background-color: rgb(216, 216, 216"],
+html[class*="owl-retro"] [style*="background-color: rgb(215, 215, 215"],
+html[class*="owl-retro"] [style*="background-color: rgb(214, 214, 214"],
+html[class*="owl-retro"] [style*="background-color: rgb(213, 213, 213"],
+html[class*="owl-retro"] [style*="background-color: rgb(212, 212, 212"],
+html[class*="owl-retro"] [style*="background-color: rgb(211, 211, 211"],
+html[class*="owl-retro"] [style*="background-color: rgb(210, 210, 210"],
+html[class*="owl-retro"] [style*="background-color: rgb(209, 209, 209"],
+html[class*="owl-retro"] [style*="background-color: rgb(208, 208, 208"],
+html[class*="owl-retro"] [style*="background-color: rgb(207, 207, 207"],
+html[class*="owl-retro"] [style*="background-color: rgb(206, 206, 206"],
+html[class*="owl-retro"] [style*="background-color: rgb(205, 205, 205"],
+html[class*="owl-retro"] [style*="background-color: rgb(204, 204, 204"],
+html[class*="owl-retro"] [style*="background-color: rgb(203, 203, 203"],
+html[class*="owl-retro"] [style*="background-color: rgb(202, 202, 202"],
+html[class*="owl-retro"] [style*="background-color: rgb(201, 201, 201"],
+html[class*="owl-retro"] [style*="background-color: rgb(200, 200, 200"],
+html[class*="owl-retro"] [style*="background-color: rgb(199, 199, 199"],
+html[class*="owl-retro"] [style*="background-color: rgb(198, 198, 198"],
+html[class*="owl-retro"] [style*="background-color: rgb(197, 197, 197"],
+html[class*="owl-retro"] [style*="background-color: rgb(196, 196, 196"],
+html[class*="owl-retro"] [style*="background-color: rgb(195, 195, 195"],
+html[class*="owl-retro"] [style*="background-color: rgb(194, 194, 194"],
+html[class*="owl-retro"] [style*="background-color: rgb(193, 193, 193"],
+html[class*="owl-retro"] [style*="background-color: rgb(192, 192, 192"],
+html[class*="owl-retro"] [style*="background-color: rgb(191, 191, 191"],
+html[class*="owl-retro"] [style*="background-color: rgb(190, 190, 190"],
+html[class*="owl-retro"] [style*="background-color: rgb(189, 189, 189"],
+html[class*="owl-retro"] [style*="background-color: rgb(188, 188, 188"],
+html[class*="owl-retro"] [style*="background-color: rgb(187, 187, 187"],
+html[class*="owl-retro"] [style*="background-color: rgb(186, 186, 186"],
+html[class*="owl-retro"] [style*="background-color: rgb(185, 185, 185"],
+html[class*="owl-retro"] [style*="background-color: rgb(184, 184, 184"],
+html[class*="owl-retro"] [style*="background-color: rgb(183, 183, 183"],
+html[class*="owl-retro"] [style*="background-color: rgb(182, 182, 182"],
+html[class*="owl-retro"] [style*="background-color: rgb(181, 181, 181"],
+html[class*="owl-retro"] [style*="background-color: rgb(180, 180, 180"] {
+  background: var(--owl-bg-tertiary, #ede9e0) !important;
+  background-color: var(--owl-bg-tertiary, #ede9e0) !important;
+}
+
+/* ============================================
+   ADVANCED ELEMENT DETECTION
+   Using attribute selectors and pseudo-elements
+   ============================================ */
+
+/* Generic container backgrounds */
+html[class*="owl-retro"] [class*="bg-white"],
+html[class*="owl-retro"] [class*="bg-light"],
+html[class*="owl-retro"] [class*="background-white"],
+html[class*="owl-retro"] [class*="white-bg"] {
+  background: var(--owl-bg-primary, #faf8f3) !important;
+}
+
+/* Specific element targeting */
+html[class*="owl-retro"] div[style*="background: white"],
+html[class*="owl-retro"] section[style*="background: white"],
+html[class*="owl-retro"] article[style*="background: white"],
+html[class*="owl-retro"] aside[style*="background: white"],
+html[class*="owl-retro"] main[style*="background: white"],
+html[class*="owl-retro"] header[style*="background: white"],
+html[class*="owl-retro"] footer[style*="background: white"],
+html[class*="owl-retro"] nav[style*="background: white"] {
+  background: var(--owl-bg-primary, #faf8f3) !important;
+}
+
+/* ============================================
+   DYNAMIC CONTENT DETECTION
+   For dynamically loaded content
+   ============================================ */
+
+/* Mutation observer targets - elements that might change */
+html[class*="owl-retro"] [data-bg*="white"],
+html[class*="owl-retro"] [data-background*="white"],
+html[class*="owl-retro"] [data-theme*="light"] {
+  background: var(--owl-bg-primary, #faf8f3) !important;
+}
+
+/* ============================================
+   FRAMEWORK-SPECIFIC OVERRIDES
+   Popular frameworks and their white space patterns
+   ============================================ */
+
+/* Bootstrap white backgrounds */
+html[class*="owl-retro"] .bg-white,
+html[class*="owl-retro"] .bg-light {
+  background-color: var(--owl-bg-primary, #faf8f3) !important;
+}
+
+/* Tailwind CSS white utilities */
+html[class*="owl-retro"] [class*="bg-white"],
+html[class*="owl-retro"] [class*="bg-gray-50"],
+html[class*="owl-retro"] [class*="bg-gray-100"],
+html[class*="owl-retro"] [class*="bg-slate-50"],
+html[class*="owl-retro"] [class*="bg-slate-100"] {
+  background-color: var(--owl-bg-primary, #faf8f3) !important;
+}
+
+/* Material-UI white backgrounds */
+html[class*="owl-retro"] .MuiPaper-root,
+html[class*="owl-retro"] [class*="MuiPaper"],
+html[class*="owl-retro"] .MuiCard-root,
+html[class*="owl-retro"] [class*="MuiCard"] {
+  background-color: var(--owl-bg-secondary, #f5f2ea) !important;
+}
+
+/* Ant Design white backgrounds */
+html[class*="owl-retro"] .ant-layout,
+html[class*="owl-retro"] .ant-card,
+html[class*="owl-retro"] [class*="ant-"],
+html[class*="owl-retro"] [class*="ant-card"] {
+  background: var(--owl-bg-secondary, #f5f2ea) !important;
+}
+
+/* Semantic UI white backgrounds */
+html[class*="owl-retro"] .ui.card,
+html[class*="owl-retro"] .ui.segment,
+html[class*="owl-retro"] .ui.menu {
+  background: var(--owl-bg-secondary, #f5f2ea) !important;
+}
+
+/* ============================================
+   IMAGE AND MEDIA BACKGROUND DETECTION
+   Handling elements with white backgrounds behind images
+   ============================================ */
+
+/* Image containers with white backgrounds */
+html[class*="owl-retro"] [class*="image-container"],
+html[class*="owl-retro"] [class*="img-container"],
+html[class*="owl-retro"] [class*="media-container"] {
+  background: var(--owl-bg-secondary, #f5f2ea) !important;
+}
+
+/* Figure and figcaption elements */
+html[class*="owl-retro"] figure {
+  background: var(--owl-bg-secondary, #f5f2ea) !important;
+}
+
+html[class*="owl-retro"] figcaption {
+  background: transparent !important;
+  color: var(--owl-text-secondary, #685a3c) !important;
+}
+
+/* ============================================
+   FORM AND INPUT DETECTION
+   Enhanced form element theming
+   ============================================ */
+
+/* Form containers */
+html[class*="owl-retro"] form,
+html[class*="owl-retro"] .form,
+html[class*="owl-retro"] [class*="form-"] {
+  background: var(--owl-bg-primary, #faf8f3) !important;
+}
+
+/* Input group containers */
+html[class*="owl-retro"] .input-group,
+html[class*="owl-retro"] [class*="input-group"],
+html[class*="owl-retro"] .form-group,
+html[class*="owl-retro"] [class*="form-group"] {
+  background: var(--owl-bg-secondary, #f5f2ea) !important;
+}
+
+/* ============================================
+   SOCIAL MEDIA SPECIFIC DETECTION
+   Popular social media platforms
+   ============================================ */
+
+/* Twitter/X specific */
+html[class*="owl-retro"] [data-testid*="cellInnerDiv"],
+html[class*="owl-retro"] [data-testid*="primaryColumn"] {
+  background: var(--owl-bg-primary, #faf8f3) !important;
+}
+
+/* Facebook specific */
+html[class*="owl-retro"] [class*="userContentWrapper"],
+html[class*="owl-retro"] [class*="timeline"] {
+  background: var(--owl-bg-primary, #faf8f3) !important;
+}
+
+/* YouTube specific */
+html[class*="owl-retro"] ytd-app,
+html[class*="owl-retro"] ytd-page-manager,
+html[class*="owl-retro"] [class*="ytd-"] {
+  background: var(--owl-bg-primary, #faf8f3) !important;
+}
+
+/* Reddit specific */
+html[class*="owl-retro"] .Post,
+html[class*="owl-retro"] [class*="post"],
+html[class*="owl-retro"] .Comment {
+  background: var(--owl-bg-secondary, #f5f2ea) !important;
+}
+
+/* ============================================
+   E-COMMERCE SPECIFIC DETECTION
+   Popular e-commerce platforms
+   ============================================ */
+
+/* Generic e-commerce selectors */
+html[class*="owl-retro"] [class*="product"],
+html[class*="owl-retro"] [class*="Product"],
+html[class*="owl-retro"] [class*="item"],
+html[class*="owl-retro"] [class*="Item"],
+html[class*="owl-retro"] [class*="listing"],
+html[class*="owl-retro"] [class*="Listing"] {
+  background: var(--owl-bg-secondary, #f5f2ea) !important;
+}
+
+/* Shopify specific */
+html[class*="owl-retro"] .shopify-section,
+html[class*="owl-retro"] [class*="shopify-"] {
+  background: var(--owl-bg-primary, #faf8f3) !important;
+}
+
+/* WooCommerce specific */
+html[class*="owl-retro"] .woocommerce,
+html[class*="owl-retro"] [class*="wc-"] {
+  background: var(--owl-bg-primary, #faf8f3) !important;
+}
+
+/* Amazon specific */
+html[class*="owl-retro"] .a-section,
+html[class*="owl-retro"] [class*="a-box"] {
+  background: var(--owl-bg-secondary, #f5f2ea) !important;
+}
+
+/* ============================================
+   PERFORMANCE OPTIMIZATIONS
+   Efficient selectors for better performance
+   ============================================ */
+
+/* High-priority universal selectors */
+html[class*="owl-retro"] body,
+html[class*="owl-retro"] .main,
+html[class*="owl-retro"] .content,
+html[class*="owl-retro"] .container {
+  background: var(--owl-bg-primary, #faf8f3) !important;
+}
+
+/* Specific high-impact selectors */
+html[class*="owl-retro"] [class*="wrapper"],
+html[class*="owl-retro"] [class*="wrap"],
+html[class*="owl-retro"] [class*="page"],
+html[class*="owl-retro"] [class*="page-wrapper"] {
+  background: var(--owl-bg-primary, #faf8f3) !important;
+}
+
+/* Utility class overrides */
+html[class*="owl-retro"] .white,
+html[class*="owl-retro"] .light,
+html[class*="owl-retro"] .bg-white,
+html[class*="owl-retro"] .bg-light {
+  background: var(--owl-bg-primary, #faf8f3) !important;
+}
+
+/* ============================================
+   DARK MODE SPECIFIC OVERRIDES
+   Dark theme variations for white space detection
+   ============================================ */
+
+html.owl-retro-dark .bg-white,
+html.owl-retro-dark .bg-light,
+html.owl-retro-dark [style*="background: white"] {
+  background: var(--owl-bg-primary, #1a1815) !important;
+  color: var(--owl-text-primary, #e8e3d8) !important;
+}
+
+html.owl-retro-dark [class*="bg-white"],
+html.owl-retro-dark [class*="bg-light"] {
+  background-color: var(--owl-bg-primary, #1a1815) !important;
+}
+
+/* ============================================
+   RESPONSIVE AND MOBILE OPTIMIZATIONS
+   Mobile-specific white space handling
+   ============================================ */
+
+/* Mobile-first responsive adjustments */
+@media (max-width: 768px) {
+  html[class*="owl-retro"] [class*="mobile-"],
+  html[class*="owl-retro"] [class*="responsive-"] {
+    background: var(--owl-bg-primary, #faf8f3) !important;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  html[class*="owl-retro"] [class*="touch-"],
+  html[class*="owl-retro"] [class*="mobile-"] {
+    background: var(--owl-bg-primary, #faf8f3) !important;
+  }
+}
