@@ -246,6 +246,18 @@ export function ensureContrast(foregroundColor, backgroundColor, targetRatio = C
   return `rgba(${finalRgb.r}, ${finalRgb.g}, ${finalRgb.b}, ${finalRgb.a})`;
 }
 
+// Note: WCAG validation functions have been moved to src/utils/accessibility/wcag-validation.js
+// Import them from there: import { validateWCAG_AA, validateWCAG_AAA, getContrastValidation } from '../accessibility/wcag-validation.js';
+
+// Note: Color blindness functions have been moved to src/utils/accessibility/color-blindness.js
+// Import them from there: import { simulateColorBlindness, checkColorBlindnessContrast } from '../accessibility/color-blindness.js';
+
+// Note: High contrast functions have been moved to src/utils/accessibility/high-contrast.js
+// Import them from there: import { getHighContrastColor, optimizeForHighContrast } from '../accessibility/high-contrast.js';
+
+// Note: Reduced motion functions have been moved to src/utils/accessibility/reduced-motion.js
+// Import them from there: import { getMotionPreference, generateMotionSafeCSS } from '../accessibility/reduced-motion.js';
+
 /**
  * Check if color should be preserved
  */
