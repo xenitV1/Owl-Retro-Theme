@@ -1,0 +1,310 @@
+/**
+ * Owl Retro - Advanced Dark Space Detector (2024-2025)
+ * Koyu alanları tespit edip retro tema renkleri ile değiştirme sistemi
+ * Modern CSS selectors ile gelişmiş koyu alan algılama
+ */
+
+/* ============================================
+   DARK SPACE DETECTION - RETRO PALETTE
+   Retro tema ile uyumlu koyu alan değiştirme sistemi
+   ============================================ */
+
+/* Pure Black Backgrounds (0, 0, 0) - Ana tema rengi ile değiştir */
+html[class*="owl-retro"] [style*="background-color: rgb(0, 0, 0)"],
+html[class*="owl-retro"] [style*="background-color: #000"],
+html[class*="owl-retro"] [style*="background-color: #000000"],
+html[class*="owl-retro"] [style*="background-color: black"],
+html[class*="owl-retro"] [style*="background: rgb(0, 0, 0)"],
+html[class*="owl-retro"] [style*="background: #000"],
+html[class*="owl-retro"] [style*="background: #000000"],
+html[class*="owl-retro"] [style*="background: black"] {
+  background: var(--owl-bg-primary, #1a1815) !important;
+  background-color: var(--owl-bg-primary, #1a1815) !important;
+}
+
+/* Near-black backgrounds (0-15 range) - İkincil tema rengi ile değiştir */
+html[class*="owl-retro"] [style*="background-color: rgb(0, 0, 0"],
+html[class*="owl-retro"] [style*="background-color: rgb(1, 1, 1"],
+html[class*="owl-retro"] [style*="background-color: rgb(2, 2, 2"],
+html[class*="owl-retro"] [style*="background-color: rgb(3, 3, 3"],
+html[class*="owl-retro"] [style*="background-color: rgb(4, 4, 4"],
+html[class*="owl-retro"] [style*="background-color: rgb(5, 5, 5"],
+html[class*="owl-retro"] [style*="background-color: rgb(6, 6, 6"],
+html[class*="owl-retro"] [style*="background-color: rgb(7, 7, 7"],
+html[class*="owl-retro"] [style*="background-color: rgb(8, 8, 8"],
+html[class*="owl-retro"] [style*="background-color: rgb(9, 9, 9"],
+html[class*="owl-retro"] [style*="background-color: rgb(10, 10, 10"],
+html[class*="owl-retro"] [style*="background-color: rgb(11, 11, 11"],
+html[class*="owl-retro"] [style*="background-color: rgb(12, 12, 12"],
+html[class*="owl-retro"] [style*="background-color: rgb(13, 13, 13"],
+html[class*="owl-retro"] [style*="background-color: rgb(14, 14, 14"],
+html[class*="owl-retro"] [style*="background-color: rgb(15, 15, 15"] {
+  background: var(--owl-bg-secondary, #252320) !important;
+  background-color: var(--owl-bg-secondary, #252320) !important;
+}
+
+/* Dark gray backgrounds (16-50 range) - Üçüncül tema rengi ile değiştir */
+html[class*="owl-retro"] [style*="background-color: rgb(16, 16, 16"],
+html[class*="owl-retro"] [style*="background-color: rgb(17, 17, 17"],
+html[class*="owl-retro"] [style*="background-color: rgb(18, 18, 18"],
+html[class*="owl-retro"] [style*="background-color: rgb(19, 19, 19"],
+html[class*="owl-retro"] [style*="background-color: rgb(20, 20, 20"],
+html[class*="owl-retro"] [style*="background-color: rgb(21, 21, 21"],
+html[class*="owl-retro"] [style*="background-color: rgb(22, 22, 22"],
+html[class*="owl-retro"] [style*="background-color: rgb(23, 23, 23"],
+html[class*="owl-retro"] [style*="background-color: rgb(24, 24, 24"],
+html[class*="owl-retro"] [style*="background-color: rgb(25, 25, 25"],
+html[class*="owl-retro"] [style*="background-color: rgb(26, 26, 26"],
+html[class*="owl-retro"] [style*="background-color: rgb(27, 27, 27"],
+html[class*="owl-retro"] [style*="background-color: rgb(28, 28, 28"],
+html[class*="owl-retro"] [style*="background-color: rgb(29, 29, 29"],
+html[class*="owl-retro"] [style*="background-color: rgb(30, 30, 30"],
+html[class*="owl-retro"] [style*="background-color: rgb(31, 31, 31"],
+html[class*="owl-retro"] [style*="background-color: rgb(32, 32, 32"],
+html[class*="owl-retro"] [style*="background-color: rgb(33, 33, 33"],
+html[class*="owl-retro"] [style*="background-color: rgb(34, 34, 34"],
+html[class*="owl-retro"] [style*="background-color: rgb(35, 35, 35"],
+html[class*="owl-retro"] [style*="background-color: rgb(36, 36, 36"],
+html[class*="owl-retro"] [style*="background-color: rgb(37, 37, 37"],
+html[class*="owl-retro"] [style*="background-color: rgb(38, 38, 38"],
+html[class*="owl-retro"] [style*="background-color: rgb(39, 39, 39"],
+html[class*="owl-retro"] [style*="background-color: rgb(40, 40, 40"],
+html[class*="owl-retro"] [style*="background-color: rgb(41, 41, 41"],
+html[class*="owl-retro"] [style*="background-color: rgb(42, 42, 42"],
+html[class*="owl-retro"] [style*="background-color: rgb(43, 43, 43"],
+html[class*="owl-retro"] [style*="background-color: rgb(44, 44, 44"],
+html[class*="owl-retro"] [style*="background-color: rgb(45, 45, 45"],
+html[class*="owl-retro"] [style*="background-color: rgb(46, 46, 46"],
+html[class*="owl-retro"] [style*="background-color: rgb(47, 47, 47"],
+html[class*="owl-retro"] [style*="background-color: rgb(48, 48, 48"],
+html[class*="owl-retro"] [style*="background-color: rgb(49, 49, 49"],
+html[class*="owl-retro"] [style*="background-color: rgb(50, 50, 50"] {
+  background: var(--owl-bg-tertiary, #2f2c28) !important;
+  background-color: var(--owl-bg-tertiary, #2f2c28) !important;
+}
+
+/* Very dark gray backgrounds (51-80 range) - İkincil tema ile değiştir */
+html[class*="owl-retro"] [style*="background-color: rgb(51, 51, 51"],
+html[class*="owl-retro"] [style*="background-color: rgb(52, 52, 52"],
+html[class*="owl-retro"] [style*="background-color: rgb(53, 53, 53"],
+html[class*="owl-retro"] [style*="background-color: rgb(54, 54, 54"],
+html[class*="owl-retro"] [style*="background-color: rgb(55, 55, 55"],
+html[class*="owl-retro"] [style*="background-color: rgb(56, 56, 56"],
+html[class*="owl-retro"] [style*="background-color: rgb(57, 57, 57"],
+html[class*="owl-retro"] [style*="background-color: rgb(58, 58, 58"],
+html[class*="owl-retro"] [style*="background-color: rgb(59, 59, 59"],
+html[class*="owl-retro"] [style*="background-color: rgb(60, 60, 60"],
+html[class*="owl-retro"] [style*="background-color: rgb(61, 61, 61"],
+html[class*="owl-retro"] [style*="background-color: rgb(62, 62, 62"],
+html[class*="owl-retro"] [style*="background-color: rgb(63, 63, 63"],
+html[class*="owl-retro"] [style*="background-color: rgb(64, 64, 64"],
+html[class*="owl-retro"] [style*="background-color: rgb(65, 65, 65"],
+html[class*="owl-retro"] [style*="background-color: rgb(66, 66, 66"],
+html[class*="owl-retro"] [style*="background-color: rgb(67, 67, 67"],
+html[class*="owl-retro"] [style*="background-color: rgb(68, 68, 68"],
+html[class*="owl-retro"] [style*="background-color: rgb(69, 69, 69"],
+html[class*="owl-retro"] [style*="background-color: rgb(70, 70, 70"],
+html[class*="owl-retro"] [style*="background-color: rgb(71, 71, 71"],
+html[class*="owl-retro"] [style*="background-color: rgb(72, 72, 72"],
+html[class*="owl-retro"] [style*="background-color: rgb(73, 73, 73"],
+html[class*="owl-retro"] [style*="background-color: rgb(74, 74, 74"],
+html[class*="owl-retro"] [style*="background-color: rgb(75, 75, 75"],
+html[class*="owl-retro"] [style*="background-color: rgb(76, 76, 76"],
+html[class*="owl-retro"] [style*="background-color: rgb(77, 77, 77"],
+html[class*="owl-retro"] [style*="background-color: rgb(78, 78, 78"],
+html[class*="owl-retro"] [style*="background-color: rgb(79, 79, 79"],
+html[class*="owl-retro"] [style*="background-color: rgb(80, 80, 80"] {
+  background: var(--owl-bg-secondary, #252320) !important;
+  background-color: var(--owl-bg-secondary, #252320) !important;
+}
+
+/* ============================================
+   DARK FRAMEWORK DETECTION
+   Popüler framework'lerin koyu alanlarını tespit et
+   ============================================ */
+
+/* Bootstrap dark backgrounds */
+html[class*="owl-retro"] .bg-dark,
+html[class*="owl-retro"] .bg-black {
+  background-color: var(--owl-bg-primary, #1a1815) !important;
+}
+
+/* Tailwind CSS dark utilities */
+html[class*="owl-retro"] [class*="bg-black"],
+html[class*="owl-retro"] [class*="bg-gray-900"],
+html[class*="owl-retro"] [class*="bg-gray-800"],
+html[class*="owl-retro"] [class*="bg-slate-900"],
+html[class*="owl-retro"] [class*="bg-slate-800"] {
+  background-color: var(--owl-bg-primary, #1a1815) !important;
+}
+
+/* Material-UI dark backgrounds */
+html[class*="owl-retro"] .MuiAppBar-colorPrimary,
+html[class*="owl-retro"] [class*="MuiDark"],
+html[class*="owl-retro"] [class*="MuiPaper-elevation"][style*="background-color: rgb(18, 18, 18"] {
+  background-color: var(--owl-bg-secondary, #252320) !important;
+}
+
+/* Ant Design dark backgrounds */
+html[class*="owl-retro"] .ant-layout-sider-dark,
+html[class*="owl-retro"] [class*="ant-menu-dark"] {
+  background: var(--owl-bg-secondary, #252320) !important;
+}
+
+/* Semantic UI dark backgrounds */
+html[class*="owl-retro"] .ui.inverted.segment,
+html[class*="owl-retro"] .ui.black.segment {
+  background: var(--owl-bg-secondary, #252320) !important;
+}
+
+/* ============================================
+   SOCIAL MEDIA DARK DETECTION
+   Sosyal medya platformlarının koyu alanları
+   ============================================ */
+
+/* Twitter/X dark mode */
+html[class*="owl-retro"] [data-testid*="primaryColumn"][style*="background-color: rgb(0, 0, 0"],
+html[class*="owl-retro"] [class*="css-1dbjc4n"][style*="background-color: rgb(0, 0, 0"] {
+  background: var(--owl-bg-primary, #1a1815) !important;
+}
+
+/* Facebook dark backgrounds */
+html[class*="owl-retro"] [class*="dark"][style*="background: rgb(24, 25, 26"],
+html[class*="owl-retro"] [data-pagelet*="root"][style*="background-color: rgb(24, 25, 26"] {
+  background: var(--owl-bg-primary, #1a1815) !important;
+}
+
+/* YouTube dark theme */
+html[class*="owl-retro"] ytd-app[dark="true"],
+html[class*="owl-retro"] [class*="ytd-dark"] {
+  background: var(--owl-bg-primary, #1a1815) !important;
+}
+
+/* Reddit dark mode */
+html[class*="owl-retro"] .Post[style*="background-color: rgb(26, 26, 27"],
+html[class*="owl-retro"] [class*="Comment"][style*="background-color: rgb(31, 31, 31"] {
+  background: var(--owl-bg-secondary, #252320) !important;
+}
+
+/* ============================================
+   E-COMMERCE DARK DETECTION
+   E-ticaret platformlarının koyu alanları
+   ============================================ */
+
+/* Generic e-commerce dark selectors */
+html[class*="owl-retro"] [class*="dark-mode"],
+html[class*="owl-retro"] [class*="theme-dark"] {
+  background: var(--owl-bg-primary, #1a1815) !important;
+}
+
+/* Shopify dark backgrounds */
+html[class*="owl-retro"] .shopify-section[style*="background: rgb(33, 37, 41"],
+html[class*="owl-retro"] [class*="shopify-theme-dark"] {
+  background: var(--owl-bg-primary, #1a1815) !important;
+}
+
+/* WooCommerce dark */
+html[class*="owl-retro"] .woocommerce-dark,
+html[class*="owl-retro"] [class*="wc-dark"] {
+  background: var(--owl-bg-primary, #1a1815) !important;
+}
+
+/* Amazon dark backgrounds */
+html[class*="owl-retro"] .a-section[style*="background: rgb(15, 17, 17"],
+html[class*="owl-retro"] [class*="a-color-background-dark"] {
+  background: var(--owl-bg-primary, #1a1815) !important;
+}
+
+/* ============================================
+   EDITOR AND IDE DARK THEMES
+   Kod editörlerinin koyu alanları
+   ============================================ */
+
+/* VS Code dark theme */
+html[class*="owl-retro"] .monaco-editor,
+html[class*="owl-retro"] [class*="vs-dark"] {
+  background: var(--owl-bg-primary, #1a1815) !important;
+}
+
+/* GitHub dark mode */
+html[class*="owl-retro"] .react-code-view,
+html[class*="owl-retro"] [class*="github-dark"] {
+  background: var(--owl-bg-secondary, #252320) !important;
+}
+
+/* Code editors and terminals */
+html[class*="owl-retro"] pre,
+html[class*="owl-retro"] code {
+  background: var(--owl-bg-secondary, #252320) !important;
+  color: var(--owl-text-primary, #e8e3d8) !important;
+  border: 1px solid var(--owl-border-color, #3a3632) !important;
+}
+
+/* ============================================
+   MODAL AND OVERLAY DARK DETECTION
+   Modal ve overlay'lerin koyu alanları
+   ============================================ */
+
+/* Dark modals */
+html[class*="owl-retro"] [class*="modal"][style*="background: rgba(0, 0, 0"],
+html[class*="owl-retro"] [class*="overlay"][style*="background: rgba(0, 0, 0"] {
+  background: var(--owl-bg-primary, #1a1815) !important;
+}
+
+/* Backdrop filters */
+html[class*="owl-retro"] [class*="backdrop-blur"][style*="background: rgba(0, 0, 0"],
+html[class*="owl-retro"] [style*="backdrop-filter"][style*="background: rgba(0, 0, 0"] {
+  background: var(--owl-bg-primary, #1a1815) !important;
+}
+
+/* ============================================
+   FOOTER AND HEADER DARK DETECTION
+   Alt kısım ve üst kısım koyu alanları
+   ============================================ */
+
+/* Dark footers */
+html[class*="owl-retro"] footer[style*="background: rgb(18, 18, 18"],
+html[class*="owl-retro"] [class*="footer-dark"] {
+  background: var(--owl-bg-secondary, #252320) !important;
+}
+
+/* Dark headers */
+html[class*="owl-retro"] header[style*="background: rgb(33, 37, 41"],
+html[class*="owl-retro"] [class*="header-dark"] {
+  background: var(--owl-bg-secondary, #252320) !important;
+}
+
+/* Navigation dark mode */
+html[class*="owl-retro"] nav[style*="background: rgb(52, 58, 64"],
+html[class*="owl-retro"] [class*="nav-dark"] {
+  background: var(--owl-bg-secondary, #252320) !important;
+}
+
+/* ============================================
+   PERFORMANCE OPTIMIZATIONS
+   Efficient selectors for better performance
+   ============================================ */
+
+/* High-priority universal selectors */
+html[class*="owl-retro"] body,
+html[class*="owl-retro"] .main,
+html[class*="owl-retro"] .content,
+html[class*="owl-retro"] .container {
+  background: var(--owl-bg-primary, #faf8f3) !important;
+}
+
+/* Specific high-impact selectors */
+html[class*="owl-retro"] [class*="wrapper"],
+html[class*="owl-retro"] [class*="wrap"],
+html[class*="owl-retro"] [class*="page"],
+html[class*="owl-retro"] [class*="page-wrapper"] {
+  background: var(--owl-bg-primary, #faf8f3) !important;
+}
+
+/* Utility class overrides */
+html[class*="owl-retro"] .dark,
+html[class*="owl-retro"] .black,
+html[class*="owl-retro"] .bg-dark,
+html[class*="owl-retro"] .bg-black {
+  background: var(--owl-bg-primary, #1a1815) !important;
+}
