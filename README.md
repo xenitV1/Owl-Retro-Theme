@@ -1,4 +1,4 @@
-﻿# 🦉 Owl-App - Retro Theme Chrome Extension
+﻿# 🦉 Owl Retro - Cross-Browser Retro Theme Extension
 
 ## 🙏 Special Thanks
 
@@ -33,24 +33,50 @@ Transform any website into a beautiful retro-themed experience with customizable
 ### Development Mode
 
 1. Clone or download this repository
-2. Open Chrome and navigate to `chrome://extensions/`
-3. Enable "Developer mode" in the top right
-4. Click "Load unpacked"
-5. Select the `Owl-Retro` folder
-6. The extension icon will appear in your toolbar!
+2. Choose your browser and use the appropriate manifest file:
 
-### Chrome Web Store (Coming Soon)
+#### Chrome/Edge
+1. Open `chrome://extensions/` or `edge://extensions/`
+2. Enable "Developer mode" in the top right
+3. Click "Load unpacked"
+4. Select the `Owl-Retro` folder
+5. Use the default `manifest.json`
 
-The extension will be available on the Chrome Web Store soon.
+#### Firefox
+1. Open `about:debugging`
+2. Click "This Firefox" > "Load Temporary Add-on"
+3. Select the `manifest-firefox.json` file
+4. The extension will be loaded
+
+#### Safari
+1. Open Safari > Preferences > Advanced
+2. Enable "Show Develop menu in menu bar"
+3. Develop > Show Extension Builder
+4. Click "+" and select the `Owl-Retro` folder
+5. Use the `manifest-safari.json` file
+
+### Browser Stores (Coming Soon)
+
+The extension will be available on browser stores:
+- Chrome Web Store
+- Firefox Add-ons
+- Microsoft Edge Add-ons
+- Safari Extensions Gallery
 
 ## 🚀 Usage
 
-1. Click the Owl Retro icon in your Chrome toolbar
+1. Click the Owl Retro icon in your browser toolbar
 2. Toggle the theme on/off with the main switch
 3. Choose between Light, Dark, or Auto mode
 4. Enable/disable monospace fonts
 5. Adjust color intensity with the slider
 6. Use site-specific controls to always allow or block on current site
+
+**Cross-Browser Features:**
+- All browsers support the same feature set
+- Settings sync across browser sessions
+- Site-specific preferences work consistently
+- Performance optimized for each browser engine
 
 ## ⚙️ Options
 
@@ -65,15 +91,17 @@ Access advanced settings by clicking "Settings" in the popup or right-clicking t
 
 ```
 Owl-Retro/
-├── manifest.json           # Extension manifest (V3)
+├── manifest*.json          # Browser-specific manifests (V3)
 ├── icons/                  # Extension icons
 ├── src/
-│   ├── background/        # Service worker
+│   ├── background/        # Service worker (cross-browser)
 │   ├── content/           # Content scripts
 │   ├── styles/            # Theme CSS files
 │   ├── popup/             # Popup UI
 │   ├── options/           # Options page
-│   └── utils/             # Shared utilities
+│   └── utils/             # Cross-browser compatibility layers
+│       ├── browser-compatibility.js  # Chrome/Firefox/Edge API abstraction
+│       └── webkit-compatibility.js   # Safari WebKit API compatibility
 ```
 
 ## 🔒 Privacy
@@ -91,13 +119,32 @@ Owl Retro respects your privacy:
 - Minimal memory footprint
 - Efficient cache system
 
-## 🧪 Browser Compatibility
+## 🌐 Cross-Browser Compatibility
 
-- Chrome 88+
-- Edge 88+
-- Brave
-- Vivaldi
-- Any Chromium-based browser
+Owl Retro is designed to work across all major browsers with Manifest V3 support:
+
+### ✅ Fully Supported Browsers
+
+- **Chrome** 88+ (Manifest V3 optimized)
+- **Firefox** 109+ (Gecko API compatibility layer)
+- **Safari** 16+ (WebKit API compatibility layer)
+- **Edge** 88+ (Chromium-based)
+- **Brave**, **Vivaldi**, **Opera** (Chromium-based)
+
+### 🔧 Browser-Specific Features
+
+- **Firefox**: Native `browser.*` API support with fallback compatibility
+- **Safari**: WebKit extension API with localStorage fallback
+- **Chrome/Edge**: Optimized Manifest V3 with full API support
+- **All browsers**: Unified BrowserAPI abstraction layer
+
+### 📁 Manifest Files
+
+Each browser has its optimized manifest configuration:
+- `manifest.json` - Chrome/Edge (default)
+- `manifest-firefox.json` - Firefox specific
+- `manifest-safari.json` - Safari specific
+- `manifest-edge.json` - Edge specific
 
 ## 🐛 Known Issues
 
